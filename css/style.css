@@ -699,6 +699,123 @@ section {
 }
 
 /* ── Projects ── */
+/* ── Thesis Cards (Structured Academic Format matching CV) ── */
+.thesis-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.thesis-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.8rem 2.2rem;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.thesis-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+.thesis-card:hover {
+  border-color: var(--accent-mid);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 45px -15px rgba(0, 229, 160, 0.15);
+}
+
+.thesis-card:hover::before {
+  opacity: 1;
+}
+
+.thesis-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 0.35rem;
+}
+
+.thesis-institution {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.3px;
+}
+
+.thesis-header-sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.thesis-degree-grade {
+  font-size: 0.92rem;
+  color: var(--accent);
+  font-style: italic;
+}
+
+.thesis-degree-grade em {
+  font-style: normal;
+  color: var(--text-dimmer);
+  margin: 0 0.4rem;
+}
+
+.thesis-date {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  letter-spacing: 0.5px;
+}
+
+.thesis-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.thesis-bullets li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-dim);
+}
+
+.thesis-bullets li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.thesis-bullets .bullet-label {
+  color: var(--text);
+  font-weight: 700;
+  margin-right: 0.35rem;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
