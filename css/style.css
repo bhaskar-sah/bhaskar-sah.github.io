@@ -788,6 +788,95 @@ section {
   border: 1px solid var(--border);
 }
 
+/* ── Timeline Sub-roles (Connected Career Progression) ── */
+.timeline-subroles {
+  margin: 0.85rem 0 1.25rem 0;
+  padding: 0.9rem 1.15rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.subrole-item {
+  display: flex;
+  align-items: stretch;
+  gap: 0.85rem;
+  position: relative;
+}
+
+.subrole-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 12px;
+  flex-shrink: 0;
+}
+
+.subrole-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 0.38rem;
+  background: var(--bg-card);
+  border: 2px solid var(--text-dimmer);
+  position: relative;
+  z-index: 2;
+}
+
+.subrole-item.current .subrole-dot {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 8px var(--accent-mid);
+}
+
+.subrole-line {
+  width: 2px;
+  flex: 1;
+  min-height: 1.8rem;
+  background: linear-gradient(to bottom, var(--accent), rgba(255, 255, 255, 0.18));
+  margin: 2px 0 -4px 0;
+}
+
+.subrole-content {
+  flex: 1;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  padding-bottom: 0.85rem;
+}
+
+.subrole-item:last-child .subrole-content {
+  padding-bottom: 0.1rem;
+}
+
+.subrole-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.2px;
+}
+
+.subrole-item.current .subrole-title {
+  color: #fff;
+}
+
+.subrole-date {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  letter-spacing: 0.5px;
+}
+
+.subrole-item.current .subrole-date {
+  color: var(--accent);
+  font-weight: 500;
+}
+
 .timeline-bullets {
   list-style: none;
   padding: 0;
