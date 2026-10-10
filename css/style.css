@@ -710,7 +710,7 @@ section {
 /* ── Experience Timeline ── */
 .timeline {
   position: relative;
-  max-width: 700px;
+  max-width: 860px;
 }
 
 .timeline::before {
@@ -725,8 +725,12 @@ section {
 
 .timeline-item {
   padding-left: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   position: relative;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
 }
 
 .timeline-item::before {
@@ -741,30 +745,88 @@ section {
   box-shadow: 0 0 12px var(--accent-mid);
 }
 
+.timeline-header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
 .timeline-date {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--accent);
-  margin-bottom: 0.3rem;
   letter-spacing: 1px;
 }
 
 .timeline-item h3 {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 600;
+  color: var(--text);
   margin-bottom: 0.2rem;
 }
 
 .timeline-item .company {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: var(--text-dim);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
-.timeline-item p {
-  font-size: 0.88rem;
+.timeline-item .company .loc-badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
   color: var(--text-dimmer);
-  line-height: 1.7;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.timeline-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.timeline-bullets li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  line-height: 1.65;
+}
+
+.timeline-bullets li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.timeline-tags span {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.2rem 0.6rem;
+  background: rgba(0, 229, 160, 0.06);
+  color: var(--accent);
+  border: 1px solid rgba(0, 229, 160, 0.2);
+  border-radius: 4px;
 }
 
 /* ── Contact ── */

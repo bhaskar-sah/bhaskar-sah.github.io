@@ -20,14 +20,10 @@ if (nav) {
   });
 }
 
-// ── Skills Matrix Language Switcher (EN <-> DE) ──
-const skillsSection = document.getElementById('skills');
-
-function setSkillsLanguage(lang) {
-  if (!skillsSection) return;
-
-  // Toggle all translatable data attributes
-  const translatables = skillsSection.querySelectorAll('[data-en][data-de]');
+// ── Global Language Switcher (EN <-> DE) ──
+function setGlobalLanguage(lang) {
+  // Toggle all translatable data attributes across the site
+  const translatables = document.querySelectorAll('[data-en][data-de]');
   translatables.forEach((el) => {
     const text = el.getAttribute(`data-${lang}`);
     if (text) {
@@ -35,7 +31,7 @@ function setSkillsLanguage(lang) {
     }
   });
 
-  // Update header toggle buttons active state
+  // Update all language toggle buttons active state
   document.querySelectorAll('.lang-switch-btn').forEach((btn) => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
@@ -45,8 +41,8 @@ function setSkillsLanguage(lang) {
   const nextLabel = lang === 'en' ? '🇩🇪 DE' : '🇬🇧 EN';
   const nextTitle =
     lang === 'en'
-      ? 'Click to view entire section in German'
-      : 'Click to view entire section in English';
+      ? 'Click to view section in German'
+      : 'Click to view section in English';
 
   document.querySelectorAll('.card-lang-badge').forEach((badge) => {
     badge.textContent = nextLabel;
@@ -56,7 +52,7 @@ function setSkillsLanguage(lang) {
 
   // Save preference
   try {
-    localStorage.setItem('skills_language_pref', lang);
+    localStorage.setItem('site_language_pref', lang);
   } catch (err) {
     // ignore in case of private mode restriction
   }
@@ -66,22 +62,22 @@ function setSkillsLanguage(lang) {
 document.addEventListener('click', (e) => {
   const switchBtn = e.target.closest('.lang-switch-btn');
   if (switchBtn) {
-    setSkillsLanguage(switchBtn.dataset.lang);
+    setGlobalLanguage(switchBtn.dataset.lang);
     return;
   }
 
   const cardBadge = e.target.closest('.card-lang-badge');
   if (cardBadge) {
     const target = cardBadge.dataset.targetLang || 'de';
-    setSkillsLanguage(target);
+    setGlobalLanguage(target);
   }
 });
 
 // Restore saved language preference on load
 try {
-  const savedLang = localStorage.getItem('skills_language_pref');
+  const savedLang = localStorage.getItem('site_language_pref');
   if (savedLang && savedLang === 'de') {
-    setSkillsLanguage('de');
+    setGlobalLanguage('de');
   }
 } catch (err) {
   // ignore

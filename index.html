@@ -23,12 +23,12 @@
   <nav>
     <a href="#" class="nav-logo">bhaskar<span>.dev</span></a>
     <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-      <a href="assets/docs/Lebenslauf_Sah_MUR.pdf" target="_blank" class="nav-cv-link">CV ↗</a>
+      <a href="#about" data-en="About" data-de="Über mich">About</a>
+      <a href="#skills" data-en="Skills" data-de="Kompetenzen">Skills</a>
+      <a href="#projects" data-en="Projects" data-de="Projekte">Projects</a>
+      <a href="#experience" data-en="Experience" data-de="Erfahrung">Experience</a>
+      <a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a>
+      <a href="assets/docs/Lebenslauf_Sah_MUR.pdf" target="_blank" class="nav-cv-link" data-en="CV ↗" data-de="Lebenslauf ↗">CV ↗</a>
     </div>
   </nav>
 
@@ -57,7 +57,7 @@
             class="hero-avatar">
           <div class="hero-status-badge">
             <span class="status-dot"></span>
-            <span>Open to opportunities</span>
+            <span data-en="Open to opportunities" data-de="Offen für neue Angebote">Open to opportunities</span>
           </div>
         </div>
       </div>
@@ -67,8 +67,8 @@
   <!-- ── About ── -->
   <section id="about">
     <div class="reveal">
-      <div class="section-label">// 01 — About</div>
-      <div class="section-title">Who I am</div>
+      <div class="section-label" data-en="// 01 — About" data-de="// 01 — Über mich">// 01 — About</div>
+      <div class="section-title" data-en="Who I am" data-de="Über mich">Who I am</div>
     </div>
     <div class="about-grid">
       <div class="about-text reveal">
@@ -651,8 +651,8 @@
   <!-- ── Projects ── -->
   <section id="projects">
     <div class="reveal">
-      <div class="section-label">// 03 — Projects</div>
-      <div class="section-title">Selected Work</div>
+      <div class="section-label" data-en="// 03 — Projects" data-de="// 03 — Projekte">// 03 — Projects</div>
+      <div class="section-title" data-en="Selected Work" data-de="Ausgewählte Projekte">Selected Work</div>
     </div>
     <div class="projects-grid">
       <div class="project-card reveal">
@@ -700,30 +700,162 @@
 
   <!-- ── Experience ── -->
   <section id="experience" style="background: var(--bg-card);">
-    <div class="reveal">
-      <div class="section-label">// 04 — Experience</div>
-      <div class="section-title">Where I've worked</div>
+    <div class="skills-header-row reveal">
+      <div>
+        <div class="section-label" data-en="// 04 — Experience" data-de="// 04 — Berufserfahrung">// 04 — Experience</div>
+        <div class="section-title" data-en="Where I've worked" data-de="Berufserfahrung">Where I've worked</div>
+      </div>
+      <div class="skills-lang-switch">
+        <span class="lang-switch-hint">🌐 View in:</span>
+        <button type="button" class="lang-switch-btn active" data-lang="en">English</button>
+        <button type="button" class="lang-switch-btn" data-lang="de">Deutsch</button>
+      </div>
     </div>
+
     <div class="timeline">
+      <!-- Role 1: secida AG -->
       <div class="timeline-item reveal">
-        <div class="timeline-date">Apr 2026 — Present</div>
-        <h3>Werkstudent — IT Security</h3>
-        <div class="company">Secida AG</div>
-        <p>Working part-time in IT/OT security consulting, bridging industrial automation expertise with cybersecurity
-          frameworks.</p>
+        <div class="timeline-header-wrap">
+          <h3 data-en="IT Systems Administrator (Full-Time) · ex-Working Student" data-de="IT-Administrator (Vollzeit) · ehem. Werkstudent">IT Systems Administrator (Full-Time) · ex-Working Student</h3>
+          <div class="timeline-date" data-en="Apr 2026 — Present" data-de="04.2026 — heute">Apr 2026 — Present</div>
+        </div>
+        <div class="company">
+          <strong>secida AG</strong>
+          <span class="loc-badge" data-en="Essen, Germany" data-de="Essen, Deutschland">Essen, Germany</span>
+        </div>
+        <ul class="timeline-bullets">
+          <li data-en="Administration of client/server environments (Linux, Windows Server), Microsoft Entra ID (Azure AD), and Active Directory."
+              data-de="Administration von Client-/Serversystemen (Linux, Windows Server), Microsoft Entra ID (Azure AD) und Active Directory.">
+            Administration of client/server environments (Linux, Windows Server), Microsoft Entra ID (Azure AD), and Active Directory.
+          </li>
+          <li data-en="Automating deployment workflows and system configurations across heterogeneous infrastructure via advanced Bash & PowerShell scripting under ISO 27001 standards."
+              data-de="Automatisierung von Deployment-Prozessen und Systemkonfigurationen über heterogene Infrastrukturen mittels fortgeschrittenem Shell-Scripting (Bash, PowerShell) unter Einhaltung des ISO 27001-Standards.">
+            Automating deployment workflows and system configurations across heterogeneous infrastructure via advanced Bash & PowerShell scripting under ISO 27001 standards.
+          </li>
+          <li data-en="Enforcement of IT security baselines, Least Privilege principles, MFA, Conditional Access, and Privileged Identity Management (PIM/PAM)."
+              data-de="Umsetzung von IT-Sicherheitsrichtlinien, Least-Privilege-Prinzipien, MFA, Conditional Access und Privileged Identity Management (PIM/PAM).">
+            Enforcement of IT security baselines, Least Privilege principles, MFA, Conditional Access, and Privileged Identity Management (PIM/PAM).
+          </li>
+          <li data-en="Security Operations (SOC): Threat analysis with Microsoft Defender for Endpoint / O365, incident response, and quarantine triage."
+              data-de="Security Operations (SOC): Bedrohungsanalyse mit Microsoft Defender for Endpoint / O365, Incident Management und Quarantäne-Handling.">
+            Security Operations (SOC): Threat analysis with Microsoft Defender for Endpoint / O365, incident response, and quarantine triage.
+          </li>
+          <li data-en="2nd-level support, problem management, and structured troubleshooting of connected systems in accordance with ITIL processes."
+              data-de="2nd-Level-Support, Problem Management und strukturierte Fehlerbehebung vernetzter Systeme nach ITIL-Prozessen.">
+            2nd-level support, problem management, and structured troubleshooting of connected systems in accordance with ITIL processes.
+          </li>
+        </ul>
+        <div class="timeline-tags">
+          <span>Linux</span><span>Windows Server</span><span>Entra ID (Azure AD)</span><span>ISO 27001</span><span>Bash & PowerShell</span><span>Defender for Endpoint</span><span>PIM / PAM</span><span>ITIL</span>
+        </div>
       </div>
+
+      <!-- Role 2: LSR TU München -->
       <div class="timeline-item reveal">
-        <div class="timeline-date">2024 — 2026</div>
-        <h3>HiWi — Research Assistant</h3>
-        <div class="company">FRM II / TU München</div>
-        <p>Hardware development for neutron research instrumentation. Designed custom PCBs for NFC-based thermocouple
-          sensing with energy harvesting.</p>
+        <div class="timeline-header-wrap">
+          <h3 data-en="Tutor · Control Engineering & Automation Laboratory" data-de="Tutor · Praktikum Regelung und Automation">Tutor · Control Engineering & Automation Laboratory</h3>
+          <div class="timeline-date" data-en="Oct 2025 — Mar 2026" data-de="10.2025 — 03.2026">Oct 2025 — Mar 2026</div>
+        </div>
+        <div class="company">
+          <strong data-en="Chair of Control Engineering (LSR), TU München" data-de="Lehrstuhl für Steuerungs- und Regelungstechnik (LSR), TUM">Chair of Control Engineering (LSR), TU München</strong>
+          <span class="loc-badge" data-en="Munich, Germany" data-de="München, Deutschland">Munich, Germany</span>
+        </div>
+        <ul class="timeline-bullets">
+          <li data-en="Academic mentoring of Bachelor students (Electrical & Information Tech) in the design and implementation of closed-loop control schemes (PID, LQR)."
+              data-de="Fachliche Betreuung von Bachelor-Studierenden (Elektrotechnik und Informationstechnik) bei der Auslegung und Implementierung von Regelungsverfahren (PID, LQR).">
+            Academic mentoring of Bachelor students (Electrical & Information Tech) in the design and implementation of closed-loop control schemes (PID, LQR).
+          </li>
+          <li data-en="Conducted practical lab modules, model-based system simulation in MATLAB/Simulink, and experimental validation on multi-motor drive systems."
+              data-de="Durchführung von Praktikumseinheiten, modellbasierte Simulation in MATLAB/Simulink und experimentelle Validierung direkt an Mehrmotorenanlagen.">
+            Conducted practical lab modules, model-based system simulation in MATLAB/Simulink, and experimental validation on multi-motor drive systems.
+          </li>
+        </ul>
+        <div class="timeline-tags">
+          <span>Control Theory</span><span>PID & LQR</span><span>MATLAB</span><span>Simulink</span><span>Multi-Motor Systems</span><span>Lab Instruction</span>
+        </div>
       </div>
+
+      <!-- Role 3: FRM II / TU München -->
       <div class="timeline-item reveal">
-        <div class="timeline-date">Earlier</div>
-        <h3>Research Intern</h3>
-        <div class="company">PTB — Physikalisch-Technische Bundesanstalt</div>
-        <p>Industrial measurement and hardware systems at Germany's national metrology institute.</p>
+        <div class="timeline-header-wrap">
+          <h3 data-en="Research Assistant (HiWi) · Research & Development" data-de="Wissenschaftliche Hilfskraft (HiWi) · Forschung und Entwicklung">Research Assistant (HiWi) · Research & Development</h3>
+          <div class="timeline-date" data-en="Sep 2025 — Mar 2026" data-de="09.2025 — 03.2026">Sep 2025 — Mar 2026</div>
+        </div>
+        <div class="company">
+          <strong data-en="Heinz Maier-Leibnitz Research Neutron Source (FRM II) / TUM" data-de="Forschungs-Neutronenquelle Heinz Maier-Leibnitz (FRM II) / TUM">Heinz Maier-Leibnitz Research Neutron Source (FRM II) / TUM</strong>
+          <span class="loc-badge" data-en="Garching, Germany" data-de="Garching bei München">Garching, Germany</span>
+        </div>
+        <ul class="timeline-bullets">
+          <li data-en="Conceptualized and engineered the integration of an electric motor drive for precise orientation measurement of crystal structures at the STRESS-SPEC diffractometer."
+              data-de="Konzeption und Entwicklung zur Integration eines Elektromotors zur präzisen Orientierungsmessung von Kristallstrukturen am Diffraktometer STRESS-SPEC.">
+            Conceptualized and engineered the integration of an electric motor drive for precise orientation measurement of crystal structures at the STRESS-SPEC diffractometer.
+          </li>
+          <li data-en="3D CAD assembly modeling using SolidWorks, rapid prototyping (FDM 3D printing), and physical commissioning of mechatronic subsystems."
+              data-de="CAD-Konstruktion von Baugruppen mit SolidWorks, Rapid Prototyping (3D-Druck) und experimentelle Inbetriebnahme mechatronischer Subsysteme.">
+            3D CAD assembly modeling using SolidWorks, rapid prototyping (FDM 3D printing), and physical commissioning of mechatronic subsystems.
+          </li>
+          <li data-en="Schematic capture and custom PCB design in KiCad for signal conditioning, sensor interfacing, and Hardware-in-the-Loop (HIL) integration."
+              data-de="Schaltplan- und PCB-Design mit KiCad zur Signalaufbereitung, Sensoranbindung und Hardware-in-the-Loop-Integration im Laborumfeld.">
+            Schematic capture and custom PCB design in KiCad for signal conditioning, sensor interfacing, and Hardware-in-the-Loop (HIL) integration.
+          </li>
+        </ul>
+        <div class="timeline-tags">
+          <span>KiCad (PCB Design)</span><span>SolidWorks</span><span>Rapid Prototyping (3D-Print)</span><span>HIL Integration</span><span>Instrumentation</span>
+        </div>
+      </div>
+
+      <!-- Role 4: Olivaw Robotics -->
+      <div class="timeline-item reveal">
+        <div class="timeline-header-wrap">
+          <h3 data-en="Working Student · Robot Operations Center (ROC) Operator" data-de="Werkstudent · ROC-Operator">Working Student · Robot Operations Center (ROC) Operator</h3>
+          <div class="timeline-date" data-en="Sep 2024 — Oct 2024" data-de="09.2024 — 10.2024">Sep 2024 — Oct 2024</div>
+        </div>
+        <div class="company">
+          <strong>Olivaw Robotics</strong>
+          <span class="loc-badge" data-en="Munich, Germany" data-de="München, Deutschland">Munich, Germany</span>
+        </div>
+        <ul class="timeline-bullets">
+          <li data-en="Operation, telemetry monitoring, and field maintenance of autonomous mobile robot platforms with systematic on-site troubleshooting at customer facilities."
+              data-de="Betrieb, Monitoring und Wartung autonomer Roboterplattformen sowie systematische Fehlerbehebung im Feldeinsatz bei Kunden.">
+            Operation, telemetry monitoring, and field maintenance of autonomous mobile robot platforms with systematic on-site troubleshooting at customer facilities.
+          </li>
+          <li data-en="Real-time telemetry and diagnostics utilizing ROS tools (RViz, rosbag) and assisted in the evaluation of autonomous sensor setups."
+              data-de="Echtzeit-Telemetrie und Systemdiagnose mittels ROS-Tools (RViz, rosbag) sowie Unterstützung bei der Weiterentwicklung autonomer Sensorsysteme.">
+            Real-time telemetry and diagnostics utilizing ROS tools (RViz, rosbag) and assisted in the evaluation of autonomous sensor setups.
+          </li>
+        </ul>
+        <div class="timeline-tags">
+          <span>ROS</span><span>RViz</span><span>rosbag</span><span>Autonomous Mobile Robots (AMR)</span><span>Fleet Monitoring</span><span>Field Robotics</span>
+        </div>
+      </div>
+
+      <!-- Role 5: PTB Braunschweig -->
+      <div class="timeline-item reveal">
+        <div class="timeline-header-wrap">
+          <h3 data-en="Research Intern & Bachelor Thesis · Industrial Metrology" data-de="Praktikant & Bachelorarbeit · Industrielle Messtechnik">Research Intern & Bachelor Thesis · Industrial Metrology</h3>
+          <div class="timeline-date" data-en="Aug 2022 — Sep 2023" data-de="08.2022 — 09.2023">Aug 2022 — Sep 2023</div>
+        </div>
+        <div class="company">
+          <strong data-en="Physikalisch-Technische Bundesanstalt (PTB)" data-de="Physikalisch-Technische Bundesanstalt (PTB)">Physikalisch-Technische Bundesanstalt (PTB)</strong>
+          <span class="loc-badge" data-en="Braunschweig, Germany" data-de="Braunschweig, Deutschland">Braunschweig, Germany</span>
+        </div>
+        <ul class="timeline-bullets">
+          <li data-en="Design and setup of automated measurement and test bench chains for sensor acquisition using Arduino & FPGA, sensor calibration, and LabVIEW data visualization."
+              data-de="Konzeption und Aufbau automatisierter Mess- und Prüfstandsketten zur Signalerfassung mittels Arduino und FPGA, Sensor-Kalibrierung sowie Datenvisualisierung in LabVIEW.">
+            Design and setup of automated measurement and test bench chains for sensor acquisition using Arduino & FPGA, sensor calibration, and LabVIEW data visualization.
+          </li>
+          <li data-en="Measurement, calibration, and experimental determination of magnetic parameters in closed magnetic circuits for PMSM electric motors including GUM uncertainty analysis."
+              data-de="Messung, Kalibrierung und experimentelle Bestimmung magnetischer Parameter im geschlossenen magnetischen Kreis für PMSM-Elektromotoren inklusive Messunsicherheitsanalyse (GUM).">
+            Measurement, calibration, and experimental determination of magnetic parameters in closed magnetic circuits for PMSM electric motors including GUM uncertainty analysis.
+          </li>
+          <li data-en="Developed automated data analysis and filtering routines in Python (NumPy, SciPy) for measurement data verification and precision laboratory diagnostics."
+              data-de="Entwicklung automatisierter Datenanalyse- und Filterroutinen in Python (NumPy, SciPy) zur Messdatenverifikation sowie strukturierte Fehleranalyse im Präzisionslabor.">
+            Developed automated data analysis and filtering routines in Python (NumPy, SciPy) for measurement data verification and precision laboratory diagnostics.
+          </li>
+        </ul>
+        <div class="timeline-tags">
+          <span>Arduino & FPGA</span><span>LabVIEW</span><span>Python (NumPy, SciPy)</span><span>PMSM Motors</span><span>Sensor Calibration</span><span>GUM Guidelines</span>
+        </div>
       </div>
     </div>
   </section>
@@ -731,9 +863,11 @@
   <!-- ── Contact ── -->
   <section id="contact" class="contact-section">
     <div class="reveal">
-      <div class="section-label">// 05 — Contact</div>
-      <div class="section-title">Let's connect</div>
-      <p class="contact-desc">
+      <div class="section-label" data-en="// 05 — Contact" data-de="// 05 — Kontakt">// 05 — Contact</div>
+      <div class="section-title" data-en="Let's connect" data-de="Kontakt aufnehmen">Let's connect</div>
+      <p class="contact-desc"
+         data-en="I'm currently open to full-time opportunities in robotics, automation, and OT/IT security. Feel free to reach out."
+         data-de="Ich bin derzeit offen für Vollzeitangebote in den Bereichen Robotik, Automatisierung und OT/IT-Sicherheit. Ich freue mich auf Ihre Kontaktaufnahme.">
         I'm currently open to full-time opportunities in robotics, automation, and OT/IT security. Feel free to reach
         out.
       </p>
