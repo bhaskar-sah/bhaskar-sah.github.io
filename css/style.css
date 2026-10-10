@@ -413,6 +413,60 @@ section {
   font-size: 1rem;
 }
 
+/* ── About: Languages & Hobbies ── */
+.about-personal-details {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.personal-detail-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.personal-detail-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.personal-detail-title span {
+  font-size: 0.95rem;
+}
+
+.personal-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.personal-chip {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  padding: 0.35rem 0.8rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  transition: all 0.25s ease;
+}
+
+.personal-chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(0, 229, 160, 0.06);
+  transform: translateY(-2px);
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
