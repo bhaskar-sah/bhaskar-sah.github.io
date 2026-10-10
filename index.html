@@ -1,716 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bhaskar — Robotics & AI Engineer</title>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #0a0a0f;
-    --bg-card: #12121a;
-    --bg-card-hover: #1a1a26;
-    --accent: #00e5a0;
-    --accent-dim: #00e5a022;
-    --accent-mid: #00e5a066;
-    --text: #e8e8ed;
-    --text-dim: #8888a0;
-    --text-dimmer: #55556a;
-    --border: #1e1e2e;
-    --font-display: 'Sora', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html {
-    scroll-behavior: smooth;
-    scrollbar-width: thin;
-    scrollbar-color: var(--accent-dim) transparent;
-  }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--font-display);
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
-
-  /* ── Grain overlay ── */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 9999;
-  }
-
-  /* ── Navigation ── */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    padding: 1.2rem 2.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    backdrop-filter: blur(20px);
-    background: #0a0a0fcc;
-    border-bottom: 1px solid var(--border);
-    transition: all 0.3s ease;
-  }
-
-  .nav-logo {
-    font-family: var(--font-mono);
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--accent);
-    text-decoration: none;
-    letter-spacing: -0.5px;
-  }
-  .nav-logo span { color: var(--text-dim); font-weight: 300; }
-
-  .nav-links { display: flex; gap: 2rem; }
-  .nav-links a {
-    color: var(--text-dim);
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    transition: color 0.25s;
-    font-family: var(--font-mono);
-  }
-  .nav-links a:hover { color: var(--accent); }
-
-  /* ── Hero ── */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 8rem 6vw 4rem;
-    position: relative;
-  }
-
-  .hero-grid-bg {
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(var(--border) 1px, transparent 1px),
-      linear-gradient(90deg, var(--border) 1px, transparent 1px);
-    background-size: 60px 60px;
-    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 80%);
-    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 80%);
-    opacity: 0.4;
-  }
-
-  .hero-glow {
-    position: absolute;
-    width: 500px; height: 500px;
-    background: radial-gradient(circle, var(--accent-dim) 0%, transparent 70%);
-    top: 20%; left: 10%;
-    filter: blur(80px);
-    animation: glow-drift 8s ease-in-out infinite alternate;
-  }
-
-  @keyframes glow-drift {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(60px, -40px) scale(1.15); }
-  }
-
-  .hero-content { position: relative; z-index: 2; max-width: 800px; }
-
-  .hero-tag {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    color: var(--accent);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 1.2rem;
-    opacity: 0;
-    animation: fade-up 0.8s 0.2s forwards;
-  }
-
-  .hero h1 {
-    font-size: clamp(2.8rem, 6vw, 5rem);
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -2px;
-    margin-bottom: 1.5rem;
-    opacity: 0;
-    animation: fade-up 0.8s 0.4s forwards;
-  }
-  .hero h1 .highlight {
-    background: linear-gradient(135deg, var(--accent), #00b8d4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .hero-desc {
-    font-size: 1.15rem;
-    color: var(--text-dim);
-    max-width: 560px;
-    line-height: 1.8;
-    margin-bottom: 2.5rem;
-    opacity: 0;
-    animation: fade-up 0.8s 0.6s forwards;
-  }
-
-  .hero-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    opacity: 0;
-    animation: fade-up 0.8s 0.8s forwards;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.8rem;
-    border-radius: 6px;
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: none;
-  }
-  .btn-primary {
-    background: var(--accent);
-    color: var(--bg);
-  }
-  .btn-primary:hover {
-    box-shadow: 0 0 30px var(--accent-mid);
-    transform: translateY(-2px);
-  }
-  .btn-outline {
-    background: transparent;
-    color: var(--text);
-    border: 1px solid var(--border);
-  }
-  .btn-outline:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-  }
-
-  @keyframes fade-up {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* ── Section common ── */
-  section {
-    padding: 6rem 6vw;
-    position: relative;
-  }
-
-  .section-label {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--accent);
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 0.8rem;
-  }
-
-  .section-title {
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    font-weight: 700;
-    letter-spacing: -1px;
-    margin-bottom: 3rem;
-  }
-
-  /* ── About ── */
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
-  }
-
-  .about-text p {
-    color: var(--text-dim);
-    margin-bottom: 1.2rem;
-    font-size: 1rem;
-  }
-
-  .stats-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
-  }
-
-  .stat-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-  }
-  .stat-card:hover {
-    border-color: var(--accent-mid);
-    background: var(--bg-card-hover);
-    transform: translateY(-3px);
-  }
-
-  .stat-number {
-    font-family: var(--font-mono);
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--accent);
-    display: block;
-  }
-  .stat-label {
-    font-size: 0.8rem;
-    color: var(--text-dimmer);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 0.3rem;
-  }
-
-  /* ── Skills ── */
-  .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-  }
-
-  .skill-tag {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    padding: 0.5rem 1rem;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 100px;
-    color: var(--text-dim);
-    transition: all 0.25s ease;
-    cursor: default;
-  }
-  .skill-tag:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: var(--accent-dim);
-  }
-  .skill-tag.featured {
-    border-color: var(--accent-mid);
-    color: var(--accent);
-  }
-
-  /* ── Projects ── */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .project-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 2rem;
-    transition: all 0.35s ease;
-    position: relative;
-    overflow: hidden;
-  }
-  .project-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--accent), transparent);
-    opacity: 0;
-    transition: opacity 0.35s;
-  }
-  .project-card:hover {
-    border-color: var(--accent-mid);
-    transform: translateY(-4px);
-    box-shadow: 0 20px 60px -20px #00e5a015;
-  }
-  .project-card:hover::before { opacity: 1; }
-
-  .project-icon {
-    width: 40px; height: 40px;
-    border-radius: 8px;
-    background: var(--accent-dim);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .project-card h3 {
-    font-size: 1.15rem;
-    font-weight: 600;
-    margin-bottom: 0.6rem;
-  }
-  .project-card p {
-    color: var(--text-dim);
-    font-size: 0.9rem;
-    margin-bottom: 1.2rem;
-    line-height: 1.7;
-  }
-  .project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-  .project-tags span {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    padding: 0.25rem 0.6rem;
-    background: var(--accent-dim);
-    color: var(--accent);
-    border-radius: 4px;
-  }
-
-  /* ── Experience Timeline ── */
-  .timeline {
-    position: relative;
-    max-width: 700px;
-  }
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0; bottom: 0;
-    width: 1px;
-    background: linear-gradient(to bottom, var(--accent), var(--border));
-  }
-
-  .timeline-item {
-    padding-left: 2.5rem;
-    margin-bottom: 2.5rem;
-    position: relative;
-  }
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -4px;
-    top: 6px;
-    width: 9px; height: 9px;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 12px var(--accent-mid);
-  }
-
-  .timeline-date {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--accent);
-    margin-bottom: 0.3rem;
-    letter-spacing: 1px;
-  }
-  .timeline-item h3 {
-    font-size: 1.05rem;
-    font-weight: 600;
-    margin-bottom: 0.2rem;
-  }
-  .timeline-item .company {
-    font-size: 0.85rem;
-    color: var(--text-dim);
-    margin-bottom: 0.5rem;
-  }
-  .timeline-item p {
-    font-size: 0.88rem;
-    color: var(--text-dimmer);
-    line-height: 1.7;
-  }
-
-  /* ── Contact ── */
-  .contact-section {
-    text-align: center;
-    padding: 8rem 6vw;
-  }
-  .contact-section .section-title {
-    margin-bottom: 1rem;
-  }
-  .contact-desc {
-    color: var(--text-dim);
-    max-width: 480px;
-    margin: 0 auto 2.5rem;
-    font-size: 1rem;
-  }
-
-  .contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .contact-link {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    padding: 0.7rem 1.5rem;
-    color: var(--text-dim);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    text-decoration: none;
-    transition: all 0.25s;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .contact-link:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: var(--accent-dim);
-  }
-
-  /* ── Footer ── */
-  footer {
-    padding: 2rem 6vw;
-    border-top: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--text-dimmer);
-  }
-
-  /* ── Responsive ── */
-  @media (max-width: 768px) {
-    nav { padding: 1rem 1.5rem; }
-    .nav-links { gap: 1rem; }
-    .nav-links a { font-size: 0.75rem; }
-    .hero { padding: 7rem 1.5rem 3rem; }
-    section { padding: 4rem 1.5rem; }
-    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .projects-grid { grid-template-columns: 1fr; }
-    .contact-section { padding: 5rem 1.5rem; }
-    footer { flex-direction: column; gap: 0.5rem; text-align: center; }
-  }
-
-  /* ── Scroll reveal ── */
-  .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhaskar — Robotics & AI Engineer</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ── Nav ── -->
-<nav>
-  <a href="#" class="nav-logo">bhaskar<span>.dev</span></a>
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
-<!-- ── Hero ── -->
-<section class="hero" id="hero">
-  <div class="hero-grid-bg"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-content">
-    <div class="hero-tag">// Robotics · RL · IT/OT Security</div>
-    <h1>Building intelligent<br>machines that <span class="highlight">act.</span></h1>
-    <p class="hero-desc">
-      Mechatronics & Robotics M.Sc. student at TU München, working at the intersection of reinforcement learning, robotic manipulation, and industrial security.
-    </p>
-    <div class="hero-buttons">
-      <a href="#projects" class="btn btn-primary">View Projects ↓</a>
-      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+  <!-- ── Navigation ── -->
+  <nav>
+    <a href="#" class="nav-logo">bhaskar<span>.dev</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- ── About ── -->
-<section id="about">
-  <div class="reveal">
-    <div class="section-label">// 01 — About</div>
-    <div class="section-title">Who I am</div>
-  </div>
-  <div class="about-grid">
-    <div class="about-text reveal">
-      <p>
-        I'm Bhaskar — a robotics engineer based in Munich, Germany. I'm currently completing my Master's thesis at TUM, training RL agents to push objects along complex trajectories using a Franka Panda arm in MuJoCo simulation.
+  <!-- ── Hero ── -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-tag">// Robotics · RL · IT/OT Security</div>
+      <h1>Building intelligent<br>machines that <span class="highlight">act.</span></h1>
+      <p class="hero-desc">
+        Mechatronics & Robotics M.Sc. student at TU München, working at the intersection of reinforcement learning, robotic manipulation, and industrial security.
       </p>
-      <p>
-        My background spans the full mechatronics stack: from embedded PCB design and industrial hardware to SLAM, computer vision, and deep reinforcement learning. I'm equally passionate about securing the systems I build — bridging OT and IT security in an era of connected automation.
-      </p>
-      <p>
-        Outside the lab, I'm always tinkering — whether it's a custom NFC-powered sensor board or debugging Bluetooth on a triple-monitor Linux setup.
-      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View Projects ↓</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+  </section>
 
-      <div style="margin-top: 2rem;">
-        <div class="section-label" style="margin-bottom: 1rem;">// Tech Stack</div>
-        <div class="skills-container">
-          <span class="skill-tag featured">Python</span>
-          <span class="skill-tag featured">C++</span>
-          <span class="skill-tag featured">ROS / ROS2</span>
-          <span class="skill-tag featured">MuJoCo</span>
-          <span class="skill-tag featured">PPO / RL</span>
-          <span class="skill-tag">MATLAB</span>
-          <span class="skill-tag">KiCad</span>
-          <span class="skill-tag">SLAM</span>
-          <span class="skill-tag">Computer Vision</span>
-          <span class="skill-tag">Embedded Systems</span>
-          <span class="skill-tag">Beckhoff / TwinCAT</span>
-          <span class="skill-tag">Linux</span>
-          <span class="skill-tag">Git</span>
-          <span class="skill-tag">LaTeX</span>
-          <span class="skill-tag">OT/IT Security</span>
+  <!-- ── About ── -->
+  <section id="about">
+    <div class="reveal">
+      <div class="section-label">// 01 — About</div>
+      <div class="section-title">Who I am</div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I'm Bhaskar — a robotics engineer based in Munich, Germany. I'm currently completing my Master's thesis at TUM, training RL agents to push objects along complex trajectories using a Franka Panda arm in MuJoCo simulation.
+        </p>
+        <p>
+          My background spans the full mechatronics stack: from embedded PCB design and industrial hardware to SLAM, computer vision, and deep reinforcement learning. I'm equally passionate about securing the systems I build — bridging OT and IT security in an era of connected automation.
+        </p>
+        <p>
+          Outside the lab, I'm always tinkering — whether it's a custom NFC-powered sensor board or debugging Bluetooth on a triple-monitor Linux setup.
+        </p>
+
+        <div style="margin-top: 2rem;">
+          <div class="section-label" style="margin-bottom: 1rem;">// Tech Stack</div>
+          <div class="skills-container">
+            <span class="skill-tag featured">Python</span>
+            <span class="skill-tag featured">C++</span>
+            <span class="skill-tag featured">ROS / ROS2</span>
+            <span class="skill-tag featured">MuJoCo</span>
+            <span class="skill-tag featured">PPO / RL</span>
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">KiCad</span>
+            <span class="skill-tag">SLAM</span>
+            <span class="skill-tag">Computer Vision</span>
+            <span class="skill-tag">Embedded Systems</span>
+            <span class="skill-tag">Beckhoff / TwinCAT</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">LaTeX</span>
+            <span class="skill-tag">OT/IT Security</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-grid reveal">
+        <div class="stat-card">
+          <span class="stat-number">TUM</span>
+          <div class="stat-label">M.Sc. Mechatronics</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">TU BS</span>
+          <div class="stat-label">B.Sc. Mech. Eng.</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">RL</span>
+          <div class="stat-label">Thesis Focus</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">OT</span>
+          <div class="stat-label">Security Interest</div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="stats-grid reveal">
-      <div class="stat-card">
-        <span class="stat-number">TUM</span>
-        <div class="stat-label">M.Sc. Mechatronics</div>
-      </div>
-      <div class="stat-card">
-        <span class="stat-number">TU BS</span>
-        <div class="stat-label">B.Sc. Mech. Eng.</div>
-      </div>
-      <div class="stat-card">
-        <span class="stat-number">RL</span>
-        <div class="stat-label">Thesis Focus</div>
-      </div>
-      <div class="stat-card">
-        <span class="stat-number">OT</span>
-        <div class="stat-label">Security Interest</div>
-      </div>
+  <!-- ── Projects ── -->
+  <section id="projects" style="background: var(--bg-card);">
+    <div class="reveal">
+      <div class="section-label">// 02 — Projects</div>
+      <div class="section-title">Selected Work</div>
     </div>
-  </div>
-</section>
-
-<!-- ── Projects ── -->
-<section id="projects" style="background: var(--bg-card);">
-  <div class="reveal">
-    <div class="section-label">// 02 — Projects</div>
-    <div class="section-title">Selected Work</div>
-  </div>
-  <div class="projects-grid">
-    <div class="project-card reveal">
-      <div class="project-icon">🤖</div>
-      <h3>RL-Based Robotic Push Control</h3>
-      <p>Master's thesis: PPO-trained Franka Panda agent that pushes objects along straight, Bézier, and S-curve trajectories in MuJoCo. Custom reward shaping with progress tracking, proximity gating, and orientation alignment.</p>
-      <div class="project-tags">
-        <span>Python</span><span>MuJoCo</span><span>PPO</span><span>Gymnasium</span>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-icon">🤖</div>
+        <h3>RL-Based Robotic Push Control</h3>
+        <p>Master's thesis: PPO-trained Franka Panda agent that pushes objects along straight, Bézier, and S-curve trajectories in MuJoCo. Custom reward shaping with progress tracking, proximity gating, and orientation alignment.</p>
+        <div class="project-tags">
+          <span>Python</span><span>MuJoCo</span><span>PPO</span><span>Gymnasium</span>
+        </div>
       </div>
-    </div>
 
-    <div class="project-card reveal">
-      <div class="project-icon">📡</div>
-      <h3>NFC Thermocouple Sensor PCB</h3>
-      <p>Designed a battery-free NFC sensor board in KiCad for temperature data transmission at FRM II. Uses TI RF430FRL152H with OPA333 op-amp and NFC energy harvesting — no external power needed.</p>
-      <div class="project-tags">
-        <span>KiCad</span><span>NFC</span><span>Embedded</span><span>Analog</span>
+      <div class="project-card reveal">
+        <div class="project-icon">📡</div>
+        <h3>NFC Thermocouple Sensor PCB</h3>
+        <p>Designed a battery-free NFC sensor board in KiCad for temperature data transmission at FRM II. Uses TI RF430FRL152H with OPA333 op-amp and NFC energy harvesting — no external power needed.</p>
+        <div class="project-tags">
+          <span>KiCad</span><span>NFC</span><span>Embedded</span><span>Analog</span>
+        </div>
       </div>
-    </div>
 
-    <div class="project-card reveal">
-      <div class="project-icon">🦾</div>
-      <h3>Wire Loop Navigation — KUKA LBR iiwa</h3>
-      <p>Reactive force-feedback control for navigating a wire loop game with a 7-DOF KUKA arm. Explored geometric constraints of step-size vs. arc-length on sharp curves.</p>
-      <div class="project-tags">
-        <span>ROS</span><span>C++</span><span>Force Control</span><span>KUKA</span>
+      <div class="project-card reveal">
+        <div class="project-icon">🦾</div>
+        <h3>Wire Loop Navigation — KUKA LBR iiwa</h3>
+        <p>Reactive force-feedback control for navigating a wire loop game with a 7-DOF KUKA arm. Explored geometric constraints of step-size vs. arc-length on sharp curves.</p>
+        <div class="project-tags">
+          <span>ROS</span><span>C++</span><span>Force Control</span><span>KUKA</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-icon">🚗</div>
+        <h3>TAS-Car Autonomous Vehicle</h3>
+        <p>Contributed to an autonomous driving platform integrating SLAM, perception, and path planning in a real-world research vehicle at TUM.</p>
+        <div class="project-tags">
+          <span>ROS2</span><span>SLAM</span><span>C++</span><span>Perception</span>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="project-card reveal">
-      <div class="project-icon">🚗</div>
-      <h3>TAS-Car Autonomous Vehicle</h3>
-      <p>Contributed to an autonomous driving platform integrating SLAM, perception, and path planning in a real-world research vehicle at TUM.</p>
-      <div class="project-tags">
-        <span>ROS2</span><span>SLAM</span><span>C++</span><span>Perception</span>
+  <!-- ── Experience ── -->
+  <section id="experience">
+    <div class="reveal">
+      <div class="section-label">// 03 — Experience</div>
+      <div class="section-title">Where I've worked</div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-date">Apr 2026 — Present</div>
+        <h3>Werkstudent — IT Security</h3>
+        <div class="company">Secida AG</div>
+        <p>Working part-time in IT/OT security consulting, bridging industrial automation expertise with cybersecurity frameworks.</p>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-date">2024 — 2026</div>
+        <h3>HiWi — Research Assistant</h3>
+        <div class="company">FRM II / TU München</div>
+        <p>Hardware development for neutron research instrumentation. Designed custom PCBs for NFC-based thermocouple sensing with energy harvesting.</p>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-date">Earlier</div>
+        <h3>Research Intern</h3>
+        <div class="company">PTB — Physikalisch-Technische Bundesanstalt</div>
+        <p>Industrial measurement and hardware systems at Germany's national metrology institute.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── Experience ── -->
-<section id="experience">
-  <div class="reveal">
-    <div class="section-label">// 03 — Experience</div>
-    <div class="section-title">Where I've worked</div>
-  </div>
-  <div class="timeline">
-    <div class="timeline-item reveal">
-      <div class="timeline-date">Apr 2026 — Present</div>
-      <h3>Werkstudent — IT Security</h3>
-      <div class="company">Secida AG</div>
-      <p>Working part-time in IT/OT security consulting, bridging industrial automation expertise with cybersecurity frameworks.</p>
+  <!-- ── Contact ── -->
+  <section id="contact" class="contact-section">
+    <div class="reveal">
+      <div class="section-label">// 04 — Contact</div>
+      <div class="section-title">Let's connect</div>
+      <p class="contact-desc">
+        I'm currently open to full-time opportunities in robotics, automation, and OT/IT security. Feel free to reach out.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:your@email.com" class="contact-link">
+          ✉ Email
+        </a>
+        <a href="https://linkedin.com/in/your-profile" class="contact-link" target="_blank" rel="noopener noreferrer">
+          ↗ LinkedIn
+        </a>
+        <a href="https://github.com/your-profile" class="contact-link" target="_blank" rel="noopener noreferrer">
+          ↗ GitHub
+        </a>
+      </div>
     </div>
-    <div class="timeline-item reveal">
-      <div class="timeline-date">2024 — 2026</div>
-      <h3>HiWi — Research Assistant</h3>
-      <div class="company">FRM II / TU München</div>
-      <p>Hardware development for neutron research instrumentation. Designed custom PCBs for NFC-based thermocouple sensing with energy harvesting.</p>
-    </div>
-    <div class="timeline-item reveal">
-      <div class="timeline-date">Earlier</div>
-      <h3>Research Intern</h3>
-      <div class="company">PTB — Physikalisch-Technische Bundesanstalt</div>
-      <p>Industrial measurement and hardware systems at Germany's national metrology institute.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── Contact ── -->
-<section id="contact" class="contact-section">
-  <div class="reveal">
-    <div class="section-label">// 04 — Contact</div>
-    <div class="section-title">Let's connect</div>
-    <p class="contact-desc">
-      I'm currently open to full-time opportunities in robotics, automation, and OT/IT security. Feel free to reach out.
-    </p>
-    <div class="contact-links">
-      <a href="mailto:your@email.com" class="contact-link">
-        ✉ Email
-      </a>
-      <a href="https://linkedin.com/in/your-profile" class="contact-link" target="_blank">
-        ↗ LinkedIn
-      </a>
-      <a href="https://github.com/your-profile" class="contact-link" target="_blank">
-        ↗ GitHub
-      </a>
-    </div>
-  </div>
-</section>
+  <!-- ── Footer ── -->
+  <footer>
+    <span>© 2026 Bhaskar</span>
+    <span>Built with precision ⚡</span>
+  </footer>
 
-<!-- ── Footer ── -->
-<footer>
-  <span>© 2026 Bhaskar</span>
-  <span>Built with precision ⚡</span>
-</footer>
-
-<script>
-  // Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Nav background on scroll
-  const nav = document.querySelector('nav');
-  window.addEventListener('scroll', () => {
-    nav.style.borderBottomColor = window.scrollY > 50 ? 'var(--border)' : 'transparent';
-  });
-</script>
+  <!-- Scripts -->
+  <script src="js/main.js" defer></script>
 </body>
 </html>
