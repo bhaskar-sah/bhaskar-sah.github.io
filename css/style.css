@@ -433,6 +433,61 @@ section {
   color: var(--accent);
 }
 
+/* ── Skills Header Row with Language Switcher ── */
+.skills-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.skills-header-row .section-title {
+  margin-bottom: 0;
+}
+
+.skills-lang-switch {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 4px;
+  border-radius: 50px;
+  gap: 4px;
+}
+
+.lang-switch-hint {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-dimmer);
+  padding: 0 0.5rem 0 0.75rem;
+}
+
+.lang-switch-btn {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  background: transparent;
+  color: var(--text-dim);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.lang-switch-btn:hover {
+  color: var(--accent);
+}
+
+.lang-switch-btn.active {
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 600;
+  box-shadow: 0 0 12px var(--accent-mid);
+}
+
 .skills-matrix-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
@@ -478,9 +533,44 @@ section {
 .skill-group-header {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: space-between;
   border-bottom: 1px solid var(--border);
   padding-bottom: 0.85rem;
+}
+
+.skill-group-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card-lang-badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  opacity: 0.7;
+}
+
+.skill-group-card:hover .card-lang-badge {
+  opacity: 1;
+  border-color: var(--accent-mid);
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.card-lang-badge:hover {
+  transform: scale(1.06);
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 10px var(--accent-dim);
 }
 
 .skill-group-icon {
