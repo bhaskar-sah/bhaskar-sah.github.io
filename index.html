@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bhaskar — Robotics & AI Engineer</title>
-  
+  <title>Bhaskar — AI, Robotics & Control Engineer</title>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Sora:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <!-- ── Navigation ── -->
@@ -20,9 +24,11 @@
     <a href="#" class="nav-logo">bhaskar<span>.dev</span></a>
     <div class="nav-links">
       <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
+      <a href="assets/docs/Lebenslauf_Sah_MUR.pdf" target="_blank" class="nav-cv-link">CV ↗</a>
     </div>
   </nav>
 
@@ -30,15 +36,30 @@
   <section class="hero" id="hero">
     <div class="hero-grid-bg"></div>
     <div class="hero-glow"></div>
-    <div class="hero-content">
-      <div class="hero-tag">// Robotics · RL · IT/OT Security</div>
-      <h1>Building intelligent<br>machines that <span class="highlight">act.</span></h1>
-      <p class="hero-desc">
-        Mechatronics & Robotics M.Sc. student at TU München, working at the intersection of reinforcement learning, robotic manipulation, and industrial security.
-      </p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">View Projects ↓</a>
-        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-tag">// AI · Robotics · Control · Embedded Systems</div>
+        <h1>Building intelligent<br>machines that <span class="highlight">act.</span></h1>
+        <p class="hero-desc">
+          M.Sc. graduate in Mechatronics and Robotics from TU München, working at the intersection of reinforcement
+          learning, robotic manipulation, Computer Vision, Multisensor-SLAM, Control and Embedded Systems.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View Projects ↓</a>
+          <a href="assets/docs/Lebenslauf_Sah_MUR.pdf" target="_blank" class="btn btn-outline">📄 Resume / CV</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="hero-image-card">
+          <img src="assets/images/Profile_Photo.jpg" alt="Bhaskar Sah — AI, Robotics & Control Engineer"
+            class="hero-avatar">
+          <div class="hero-status-badge">
+            <span class="status-dot"></span>
+            <span>Open to opportunities</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -52,45 +73,35 @@
     <div class="about-grid">
       <div class="about-text reveal">
         <p>
-          I'm Bhaskar — a robotics engineer based in Munich, Germany. I'm currently completing my Master's thesis at TUM, training RL agents to push objects along complex trajectories using a Franka Panda arm in MuJoCo simulation.
+          I'm Bhaskar, a robotics engineer based in Munich, Germany. Having recently completed my Master's degree at
+          TUM, my thesis focused on training RL agents to push objects along complex trajectories using a Franka Panda
+          arm in MuJoCo simulation.
         </p>
         <p>
-          My background spans the full mechatronics stack: from embedded PCB design and industrial hardware to SLAM, computer vision, and deep reinforcement learning. I'm equally passionate about securing the systems I build — bridging OT and IT security in an era of connected automation.
+          My background spans the full mechatronics stack: from embedded PCB design and industrial hardware to SLAM,
+          computer vision, and deep reinforcement learning. I'm equally passionate about securing the systems I build —
+          bridging OT and IT security in an era of connected automation.
         </p>
         <p>
-          Outside the lab, I'm always tinkering — whether it's a custom NFC-powered sensor board or debugging Bluetooth on a triple-monitor Linux setup.
+          Outside the lab, I'm always tinkering — whether it's a custom NFC-powered sensor board or debugging Bluetooth
+          on a triple-monitor Linux setup.
         </p>
 
-        <div style="margin-top: 2rem;">
-          <div class="section-label" style="margin-bottom: 1rem;">// Tech Stack</div>
-          <div class="skills-container">
-            <span class="skill-tag featured">Python</span>
-            <span class="skill-tag featured">C++</span>
-            <span class="skill-tag featured">ROS / ROS2</span>
-            <span class="skill-tag featured">MuJoCo</span>
-            <span class="skill-tag featured">PPO / RL</span>
-            <span class="skill-tag">MATLAB</span>
-            <span class="skill-tag">KiCad</span>
-            <span class="skill-tag">SLAM</span>
-            <span class="skill-tag">Computer Vision</span>
-            <span class="skill-tag">Embedded Systems</span>
-            <span class="skill-tag">Beckhoff / TwinCAT</span>
-            <span class="skill-tag">Linux</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">LaTeX</span>
-            <span class="skill-tag">OT/IT Security</span>
-          </div>
+        <div style="margin-top: 2.2rem;">
+          <a href="#skills" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.55rem 1.2rem;">
+            View Technical Matrix ↓
+          </a>
         </div>
       </div>
 
       <div class="stats-grid reveal">
         <div class="stat-card">
           <span class="stat-number">TUM</span>
-          <div class="stat-label">M.Sc. Mechatronics</div>
+          <div class="stat-label">M.Sc. Mechatronics and Robotics</div>
         </div>
         <div class="stat-card">
           <span class="stat-number">TU BS</span>
-          <div class="stat-label">B.Sc. Mech. Eng.</div>
+          <div class="stat-label">B.Sc. Mechanical Engineering (Specialization Mechatronics)</div>
         </div>
         <div class="stat-card">
           <span class="stat-number">RL</span>
@@ -104,17 +115,478 @@
     </div>
   </section>
 
-  <!-- ── Projects ── -->
-  <section id="projects" style="background: var(--bg-card);">
+  <!-- ── Skills & Kenntnisse ── -->
+  <section id="skills" style="background: var(--bg-card);">
     <div class="reveal">
-      <div class="section-label">// 02 — Projects</div>
+      <div class="section-label">// 02 — Kenntnisse & Skills</div>
+      <div class="section-title">Technical Matrix</div>
+    </div>
+
+    <div class="skills-matrix-grid">
+      <!-- 1. Programmiersprachen -->
+      <div class="skill-group-card reveal">
+        <div class="skill-group-header">
+          <span class="skill-group-icon">💻</span>
+          <span class="skill-group-title">Programmiersprachen</span>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Systemnah & OOP</span>
+          <div class="skill-chips">
+            <span class="skill-chip">C++ (11 bis 23)</span>
+            <span class="skill-chip">C</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Datenanalyse & Scripting</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Python</span>
+            <span class="skill-chip">R</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Simulation & Messung</span>
+          <div class="skill-chips">
+            <span class="skill-chip">MATLAB</span>
+            <span class="skill-chip">Simulink</span>
+            <span class="skill-chip">LabVIEW</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Hardwarebeschreibung</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Verilog</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Datenbanken</span>
+          <div class="skill-chips">
+            <span class="skill-chip">SQL</span>
+            <span class="skill-chip">PostgreSQL</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Shell-Scripting</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Bash</span>
+            <span class="skill-chip">PowerShell</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Software- & Entwicklungstools -->
+      <div class="skill-group-card reveal">
+        <div class="skill-group-header">
+          <span class="skill-group-icon">🛠️</span>
+          <span class="skill-group-title">Software- & Entwicklungstools</span>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Versionsverwaltung</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Git</span>
+            <span class="skill-chip">GitHub</span>
+            <span class="skill-chip">GitLab</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Entwicklungsumgebungen</span>
+          <div class="skill-chips">
+            <span class="skill-chip">VS Code</span>
+            <span class="skill-chip">CLion</span>
+            <span class="skill-chip">PyCharm</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Container & Virtualisierung</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Docker</span>
+            <span class="skill-chip">VMware</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">DevOps & Schnittstellen</span>
+          <div class="skill-chips">
+            <span class="skill-chip">CI/CD</span>
+            <span class="skill-chip">REST-APIs</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Betriebssysteme</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Linux (Ubuntu, Debian, Kali)</span>
+            <span class="skill-chip">Windows</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Build-Tools & Testing</span>
+          <div class="skill-chips">
+            <span class="skill-chip">CMake</span>
+            <span class="skill-chip">Make</span>
+            <span class="skill-chip">GTest</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Robotik-Frameworks -->
+      <div class="skill-group-card reveal">
+        <div class="skill-group-header">
+          <span class="skill-group-icon">🤖</span>
+          <span class="skill-group-title">Robotik-Frameworks</span>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Robotik-Middleware</span>
+          <div class="skill-chips">
+            <span class="skill-chip">ROS</span>
+            <span class="skill-chip">ROS 2 (RViz, rosbag)</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Navigation & Manipulation</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Nav2</span>
+            <span class="skill-chip">MoveIt</span>
+            <span class="skill-chip">TF2</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Robotersimulation</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Gazebo</span>
+            <span class="skill-chip">MuJoCo</span>
+            <span class="skill-chip">NVIDIA Isaac Sim</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. CAD-Tools & Konstruktion -->
+      <div class="skill-group-card reveal">
+        <div class="skill-group-header">
+          <span class="skill-group-icon">📐</span>
+          <span class="skill-group-title">CAD-Tools & Konstruktion</span>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">3D-CAD</span>
+          <div class="skill-chips">
+            <span class="skill-chip">SolidWorks</span>
+            <span class="skill-chip">Solid Edge</span>
+            <span class="skill-chip">CATIA</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Modellierung</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Baugruppenkonstruktion</span>
+            <span class="skill-chip">Zeichnungsableitung</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Rapid Prototyping</span>
+          <div class="skill-chips">
+            <span class="skill-chip">3D-Druck (FDM)</span>
+            <span class="skill-chip">Prototypenbau</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. KI-Frameworks & Bibliotheken -->
+      <div class="skill-group-card reveal">
+        <div class="skill-group-header">
+          <span class="skill-group-icon">🧠</span>
+          <span class="skill-group-title">KI-Frameworks & Bibliotheken</span>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Deep Learning & ML</span>
+          <div class="skill-chips">
+            <span class="skill-chip">PyTorch</span>
+            <span class="skill-chip">TensorFlow</span>
+            <span class="skill-chip">Scikit-Learn</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Data Science</span>
+          <div class="skill-chips">
+            <span class="skill-chip">NumPy</span>
+            <span class="skill-chip">SciPy</span>
+            <span class="skill-chip">Pandas</span>
+            <span class="skill-chip">Matplotlib</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Reinforcement Learning</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Stable-Baselines3</span>
+            <span class="skill-chip">Gym</span>
+            <span class="skill-chip">Gymnasium</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Algorithmen & CV</span>
+          <div class="skill-chips">
+            <span class="skill-chip">PPO</span>
+            <span class="skill-chip">SAC</span>
+            <span class="skill-chip">ONNX</span>
+            <span class="skill-chip">TensorRT</span>
+            <span class="skill-chip">OpenCV</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Sensorik & Signalverarbeitung -->
+      <div class="skill-group-card reveal">
+        <div class="skill-group-header">
+          <span class="skill-group-icon">📡</span>
+          <span class="skill-group-title">Sensorik & Signalverarbeitung</span>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Optische Systeme</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Elektro-optische Sensoren</span>
+            <span class="skill-chip">Kameras</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Sensordatenfusion</span>
+          <div class="skill-chips">
+            <span class="skill-chip">LiDAR</span>
+            <span class="skill-chip">RGB-D</span>
+            <span class="skill-chip">IMU</span>
+            <span class="skill-chip">Kalman-Filter</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Datenerfassung</span>
+          <div class="skill-chips">
+            <span class="skill-chip">NI DAQ</span>
+            <span class="skill-chip">CompactRIO</span>
+            <span class="skill-chip">Mixed-Signal</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Sensorkalibrierung</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Matrix-Sensorik</span>
+            <span class="skill-chip">Magnetik</span>
+            <span class="skill-chip">Optik</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Systems Engineering & Modellierung -->
+      <div class="skill-group-card reveal">
+        <div class="skill-group-header">
+          <span class="skill-group-icon">⚙️</span>
+          <span class="skill-group-title">Systems Engineering & Modellierung</span>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Anforderungsanalyse</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Anforderungsmanagement</span>
+            <span class="skill-chip">Lastenheft</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Systemarchitektur</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Subsystem-Auslegung</span>
+            <span class="skill-chip">Schnittstellen</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Validierung & Verifikation</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Sim2Real</span>
+            <span class="skill-chip">HIL-Simulation</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Dokumentation</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Nachweisführung</span>
+            <span class="skill-chip">Testkonzepte</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Hardware & Schnittstellenintegration -->
+      <div class="skill-group-card reveal">
+        <div class="skill-group-header">
+          <span class="skill-group-icon">🔌</span>
+          <span class="skill-group-title">Hardware & Schnittstellenintegration</span>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Hardware-Entwicklung</span>
+          <div class="skill-chips">
+            <span class="skill-chip">PCB-Design mit KiCad</span>
+            <span class="skill-chip">Schaltpläne</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Mikrocontroller</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Arduino</span>
+            <span class="skill-chip">Raspberry Pi 3 & 5</span>
+            <span class="skill-chip">dsPIC33</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">FPGA-Systeme</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Cyclone IV E FPGA (DE0-Nano)</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Busschnittstellen</span>
+          <div class="skill-chips">
+            <span class="skill-chip">CAN</span>
+            <span class="skill-chip">SPI</span>
+            <span class="skill-chip">I2C</span>
+            <span class="skill-chip">UART</span>
+            <span class="skill-chip">Ethernet</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. IT-Infrastruktur & Security -->
+      <div class="skill-group-card reveal">
+        <div class="skill-group-header">
+          <span class="skill-group-icon">🛡️</span>
+          <span class="skill-group-title">IT-Infrastruktur & Security</span>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Betriebssysteme</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Linux</span>
+            <span class="skill-chip">Windows Server</span>
+            <span class="skill-chip">Windows 10/11</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Security</span>
+          <div class="skill-chips">
+            <span class="skill-chip">IT-Sicherheitsrichtlinien</span>
+            <span class="skill-chip">Endpoint Protection</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Cloud & Kollaboration</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Microsoft 365</span>
+            <span class="skill-chip">Azure</span>
+            <span class="skill-chip">Entra ID</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Netzwerk & Identity</span>
+          <div class="skill-chips">
+            <span class="skill-chip">TCP/IP</span>
+            <span class="skill-chip">VLAN</span>
+            <span class="skill-chip">RBAC</span>
+            <span class="skill-chip">MFA</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10. Inbetriebnahme & Laborpraxis -->
+      <div class="skill-group-card reveal">
+        <div class="skill-group-header">
+          <span class="skill-group-icon">🔬</span>
+          <span class="skill-group-title">Inbetriebnahme & Laborpraxis</span>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">System-Bring-up</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Mechatronische & autonome Systeme</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Prüfstandsaufbau</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Automatisierte Mess- & Prüfketten</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Fehleranalyse</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Root-Cause-Analyse</span>
+            <span class="skill-chip">Messtechnik</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Dokumentation</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Entwicklungs- & Nachweisdokumente</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11. Industrieroboter-Plattformen -->
+      <div class="skill-group-card reveal">
+        <div class="skill-group-header">
+          <span class="skill-group-icon">🦾</span>
+          <span class="skill-group-title">Industrieroboter-Plattformen</span>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">7-Achs-Manipulator</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Franka Emika Panda</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Leichtbauroboter</span>
+          <div class="skill-chips">
+            <span class="skill-chip">KUKA LBR iiwa 14 R820</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Mobile Robotik</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Autonome Plattformen (AMR, AGV)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12. Soft Skills & Arbeitsweise -->
+      <div class="skill-group-card reveal">
+        <div class="skill-group-header">
+          <span class="skill-group-icon">💡</span>
+          <span class="skill-group-title">Soft Skills & Arbeitsweise</span>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Arbeitsweise</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Ziel- & lösungsorientiert</span>
+            <span class="skill-chip">Strukturiert</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Kommunikation</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Kommunikations- & teamfähig</span>
+          </div>
+        </div>
+        <div class="skill-sub-item">
+          <span class="skill-sub-label">Problemlösung</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Analytisches Denken</span>
+            <span class="skill-chip">Hohe Eigeninitiative</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Projects ── -->
+  <section id="projects">
+    <div class="reveal">
+      <div class="section-label">// 03 — Projects</div>
       <div class="section-title">Selected Work</div>
     </div>
     <div class="projects-grid">
       <div class="project-card reveal">
         <div class="project-icon">🤖</div>
         <h3>RL-Based Robotic Push Control</h3>
-        <p>Master's thesis: PPO-trained Franka Panda agent that pushes objects along straight, Bézier, and S-curve trajectories in MuJoCo. Custom reward shaping with progress tracking, proximity gating, and orientation alignment.</p>
+        <p>Master's thesis: PPO-trained Franka Panda agent that pushes objects along straight, Bézier, and S-curve
+          trajectories in MuJoCo. Custom reward shaping with progress tracking, proximity gating, and orientation
+          alignment.</p>
         <div class="project-tags">
           <span>Python</span><span>MuJoCo</span><span>PPO</span><span>Gymnasium</span>
         </div>
@@ -123,7 +595,8 @@
       <div class="project-card reveal">
         <div class="project-icon">📡</div>
         <h3>NFC Thermocouple Sensor PCB</h3>
-        <p>Designed a battery-free NFC sensor board in KiCad for temperature data transmission at FRM II. Uses TI RF430FRL152H with OPA333 op-amp and NFC energy harvesting — no external power needed.</p>
+        <p>Designed a battery-free NFC sensor board in KiCad for temperature data transmission at FRM II. Uses TI
+          RF430FRL152H with OPA333 op-amp and NFC energy harvesting — no external power needed.</p>
         <div class="project-tags">
           <span>KiCad</span><span>NFC</span><span>Embedded</span><span>Analog</span>
         </div>
@@ -132,7 +605,8 @@
       <div class="project-card reveal">
         <div class="project-icon">🦾</div>
         <h3>Wire Loop Navigation — KUKA LBR iiwa</h3>
-        <p>Reactive force-feedback control for navigating a wire loop game with a 7-DOF KUKA arm. Explored geometric constraints of step-size vs. arc-length on sharp curves.</p>
+        <p>Reactive force-feedback control for navigating a wire loop game with a 7-DOF KUKA arm. Explored geometric
+          constraints of step-size vs. arc-length on sharp curves.</p>
         <div class="project-tags">
           <span>ROS</span><span>C++</span><span>Force Control</span><span>KUKA</span>
         </div>
@@ -141,7 +615,8 @@
       <div class="project-card reveal">
         <div class="project-icon">🚗</div>
         <h3>TAS-Car Autonomous Vehicle</h3>
-        <p>Contributed to an autonomous driving platform integrating SLAM, perception, and path planning in a real-world research vehicle at TUM.</p>
+        <p>Contributed to an autonomous driving platform integrating SLAM, perception, and path planning in a real-world
+          research vehicle at TUM.</p>
         <div class="project-tags">
           <span>ROS2</span><span>SLAM</span><span>C++</span><span>Perception</span>
         </div>
@@ -150,9 +625,9 @@
   </section>
 
   <!-- ── Experience ── -->
-  <section id="experience">
+  <section id="experience" style="background: var(--bg-card);">
     <div class="reveal">
-      <div class="section-label">// 03 — Experience</div>
+      <div class="section-label">// 04 — Experience</div>
       <div class="section-title">Where I've worked</div>
     </div>
     <div class="timeline">
@@ -160,13 +635,15 @@
         <div class="timeline-date">Apr 2026 — Present</div>
         <h3>Werkstudent — IT Security</h3>
         <div class="company">Secida AG</div>
-        <p>Working part-time in IT/OT security consulting, bridging industrial automation expertise with cybersecurity frameworks.</p>
+        <p>Working part-time in IT/OT security consulting, bridging industrial automation expertise with cybersecurity
+          frameworks.</p>
       </div>
       <div class="timeline-item reveal">
         <div class="timeline-date">2024 — 2026</div>
         <h3>HiWi — Research Assistant</h3>
         <div class="company">FRM II / TU München</div>
-        <p>Hardware development for neutron research instrumentation. Designed custom PCBs for NFC-based thermocouple sensing with energy harvesting.</p>
+        <p>Hardware development for neutron research instrumentation. Designed custom PCBs for NFC-based thermocouple
+          sensing with energy harvesting.</p>
       </div>
       <div class="timeline-item reveal">
         <div class="timeline-date">Earlier</div>
@@ -180,19 +657,20 @@
   <!-- ── Contact ── -->
   <section id="contact" class="contact-section">
     <div class="reveal">
-      <div class="section-label">// 04 — Contact</div>
+      <div class="section-label">// 05 — Contact</div>
       <div class="section-title">Let's connect</div>
       <p class="contact-desc">
-        I'm currently open to full-time opportunities in robotics, automation, and OT/IT security. Feel free to reach out.
+        I'm currently open to full-time opportunities in robotics, automation, and OT/IT security. Feel free to reach
+        out.
       </p>
       <div class="contact-links">
-        <a href="mailto:your@email.com" class="contact-link">
+        <a href="mailto:bhaskarsah1997@gmail.com" class="contact-link">
           ✉ Email
         </a>
-        <a href="https://linkedin.com/in/your-profile" class="contact-link" target="_blank" rel="noopener noreferrer">
+        <a href="https://linkedin.com/in/bhaskar-sah" class="contact-link" target="_blank" rel="noopener noreferrer">
           ↗ LinkedIn
         </a>
-        <a href="https://github.com/your-profile" class="contact-link" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/bhaskar-sah" class="contact-link" target="_blank" rel="noopener noreferrer">
           ↗ GitHub
         </a>
       </div>
@@ -208,4 +686,5 @@
   <!-- Scripts -->
   <script src="js/main.js" defer></script>
 </body>
+
 </html>
