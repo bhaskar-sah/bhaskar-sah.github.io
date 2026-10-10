@@ -27,27 +27,17 @@ function setGlobalLanguage(lang) {
   translatables.forEach((el) => {
     const text = el.getAttribute(`data-${lang}`);
     if (text) {
-      el.textContent = text;
+      if (text.includes('<') || text.includes('&quot;')) {
+        el.innerHTML = text;
+      } else {
+        el.textContent = text;
+      }
     }
   });
 
   // Update all language toggle buttons active state
   document.querySelectorAll('.lang-switch-btn').forEach((btn) => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
-  });
-
-  // Update card badge buttons to point to the alternative language
-  const nextLang = lang === 'en' ? 'de' : 'en';
-  const nextLabel = lang === 'en' ? '🇩🇪 DE' : '🇬🇧 EN';
-  const nextTitle =
-    lang === 'en'
-      ? 'Click to view section in German'
-      : 'Click to view section in English';
-
-  document.querySelectorAll('.card-lang-badge').forEach((badge) => {
-    badge.textContent = nextLabel;
-    badge.title = nextTitle;
-    badge.dataset.targetLang = nextLang;
   });
 
   // Save preference
@@ -63,13 +53,6 @@ document.addEventListener('click', (e) => {
   const switchBtn = e.target.closest('.lang-switch-btn');
   if (switchBtn) {
     setGlobalLanguage(switchBtn.dataset.lang);
-    return;
-  }
-
-  const cardBadge = e.target.closest('.card-lang-badge');
-  if (cardBadge) {
-    const target = cardBadge.dataset.targetLang || 'de';
-    setGlobalLanguage(target);
   }
 });
 

@@ -29,6 +29,11 @@
       <a href="#experience" data-en="Experience" data-de="Erfahrung">Experience</a>
       <a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a>
       <a href="assets/docs/Lebenslauf_Sah_MUR.pdf" target="_blank" class="nav-cv-link" data-en="CV ↗" data-de="Lebenslauf ↗">CV ↗</a>
+      <div class="nav-lang-switch" role="group" aria-label="Language selection">
+        <button type="button" class="lang-switch-btn active" data-lang="en">EN</button>
+        <span class="lang-divider">/</span>
+        <button type="button" class="lang-switch-btn" data-lang="de">DE</button>
+      </div>
     </div>
   </nav>
 
@@ -38,16 +43,19 @@
     <div class="hero-glow"></div>
     <div class="hero-container">
       <div class="hero-content">
-        <div class="hero-tag">// AI · Robotics · Control · Embedded Systems</div>
-        <h1>Building intelligent<br>machines that <span class="highlight">act.</span></h1>
-        <p class="hero-desc">
+        <div class="hero-tag" data-en="// AI · Robotics · Control · Embedded Systems" data-de="// KI · Robotik · Regelungstechnik · Embedded Systems">// AI · Robotics · Control · Embedded Systems</div>
+        <h1 data-en="Building intelligent<br>machines that <span class=&quot;highlight&quot;>act.</span>"
+            data-de="Entwicklung intelligenter<br>Maschinen, die <span class=&quot;highlight&quot;>handeln.</span>">Building intelligent<br>machines that <span class="highlight">act.</span></h1>
+        <p class="hero-desc"
+           data-en="M.Sc. graduate in Mechatronics and Robotics from TU München, working at the intersection of reinforcement learning, robotic manipulation, Computer Vision, Multisensor-SLAM, Control and Embedded Systems."
+           data-de="M.Sc.-Absolvent der Mechatronik und Robotik an der TU München, tätig an der Schnittstelle von Reinforcement Learning, Robotik-Manipulation, Computer Vision, Multisensor-SLAM, Regelungstechnik und Embedded Systems.">
           M.Sc. graduate in Mechatronics and Robotics from TU München, working at the intersection of reinforcement
           learning, robotic manipulation, Computer Vision, Multisensor-SLAM, Control and Embedded Systems.
         </p>
         <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">View Projects ↓</a>
-          <a href="assets/docs/Lebenslauf_Sah_MUR.pdf" target="_blank" class="btn btn-outline">📄 Resume / CV</a>
-          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+          <a href="#projects" class="btn btn-primary" data-en="View Projects ↓" data-de="Projekte ansehen ↓">View Projects ↓</a>
+          <a href="assets/docs/Lebenslauf_Sah_MUR.pdf" target="_blank" class="btn btn-outline" data-en="📄 Resume / CV" data-de="📄 Lebenslauf">📄 Resume / CV</a>
+          <a href="#contact" class="btn btn-outline" data-en="Get in Touch" data-de="Kontakt aufnehmen">Get in Touch</a>
         </div>
       </div>
 
@@ -72,23 +80,27 @@
     </div>
     <div class="about-grid">
       <div class="about-text reveal">
-        <p>
+        <p data-en="I'm Bhaskar, a robotics engineer based in Munich, Germany. Having recently completed my Master's degree at TUM, my thesis focused on training RL agents to push objects along complex trajectories using a Franka Panda arm in MuJoCo simulation."
+           data-de="Ich bin Bhaskar, Robotikingenieur aus München. Nach meinem kürzlich abgeschlossenen Masterstudium an der TU München lag mein Forschungsschwerpunkt auf dem Training von RL-Agenten zur präzisen Manipulation und Trajektorienführung von Objekten mit einem Franka Panda Roboterarm in MuJoCo.">
           I'm Bhaskar, a robotics engineer based in Munich, Germany. Having recently completed my Master's degree at
           TUM, my thesis focused on training RL agents to push objects along complex trajectories using a Franka Panda
           arm in MuJoCo simulation.
         </p>
-        <p>
+        <p data-en="My background spans the full mechatronics stack: from embedded PCB design and industrial hardware to SLAM, computer vision, and deep reinforcement learning. I'm equally passionate about securing the systems I build — bridging OT and IT security in an era of connected automation."
+           data-de="Mein Profil umfasst das gesamte mechatronische Spektrum: vom PCB-Design und industrieller Hardware bis hin zu SLAM, Computer Vision und Deep Reinforcement Learning. Ebenso wichtig ist mir die Sicherheit vernetzter Systeme — die Brücke zwischen OT- und IT-Sicherheit in der modernen Automatisierung.">
           My background spans the full mechatronics stack: from embedded PCB design and industrial hardware to SLAM,
           computer vision, and deep reinforcement learning. I'm equally passionate about securing the systems I build —
           bridging OT and IT security in an era of connected automation.
         </p>
-        <p>
+        <p data-en="Outside the lab, I'm always tinkering — whether it's a custom NFC-powered sensor board or debugging Bluetooth on a triple-monitor Linux setup."
+           data-de="Außerhalb des Labors tüftle ich kontinuierlich an neuen Projekten — von batterielosen NFC-Sensorboards bis hin zur Systemoptimierung auf Multimonitor-Linux-Setups.">
           Outside the lab, I'm always tinkering — whether it's a custom NFC-powered sensor board or debugging Bluetooth
           on a triple-monitor Linux setup.
         </p>
 
         <div style="margin-top: 2.2rem;">
-          <a href="#skills" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.55rem 1.2rem;">
+          <a href="#skills" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.55rem 1.2rem;"
+             data-en="View Technical Matrix ↓" data-de="Technische Matrix ansehen ↓">
             View Technical Matrix ↓
           </a>
         </div>
@@ -97,19 +109,19 @@
       <div class="stats-grid reveal">
         <div class="stat-card">
           <span class="stat-number">TUM</span>
-          <div class="stat-label">M.Sc. Mechatronics and Robotics</div>
+          <div class="stat-label" data-en="M.Sc. Mechatronics and Robotics" data-de="M.Sc. Mechatronik und Robotik">M.Sc. Mechatronics and Robotics</div>
         </div>
         <div class="stat-card">
           <span class="stat-number">TU BS</span>
-          <div class="stat-label">B.Sc. Mechanical Engineering (Specialization Mechatronics)</div>
+          <div class="stat-label" data-en="B.Sc. Mechanical Engineering (Specialization Mechatronics)" data-de="B.Sc. Maschinenbau (Schwerpunkt Mechatronik)">B.Sc. Mechanical Engineering (Specialization Mechatronics)</div>
         </div>
         <div class="stat-card">
           <span class="stat-number">RL</span>
-          <div class="stat-label">Thesis Focus</div>
+          <div class="stat-label" data-en="Thesis Focus" data-de="Schwerpunkt Masterarbeit">Thesis Focus</div>
         </div>
         <div class="stat-card">
           <span class="stat-number">OT</span>
-          <div class="stat-label">Security Interest</div>
+          <div class="stat-label" data-en="Security Interest" data-de="Schwerpunkt OT-Sicherheit">Security Interest</div>
         </div>
       </div>
     </div>
@@ -117,16 +129,9 @@
 
   <!-- ── Skills & Technical Matrix ── -->
   <section id="skills" style="background: var(--bg-card);">
-    <div class="skills-header-row reveal">
-      <div>
-        <div class="section-label" data-en="// 02 — Skills & Expertise" data-de="// 02 — Kenntnisse & Fähigkeiten">// 02 — Skills & Expertise</div>
-        <div class="section-title" data-en="Technical Matrix" data-de="Technische Kenntnisse">Technical Matrix</div>
-      </div>
-      <div class="skills-lang-switch">
-        <span class="lang-switch-hint">🌐 View in:</span>
-        <button type="button" class="lang-switch-btn active" data-lang="en">English</button>
-        <button type="button" class="lang-switch-btn" data-lang="de">Deutsch</button>
-      </div>
+    <div class="reveal">
+      <div class="section-label" data-en="// 02 — Skills & Expertise" data-de="// 02 — Kenntnisse & Fähigkeiten">// 02 — Skills & Expertise</div>
+      <div class="section-title" data-en="Technical Matrix" data-de="Technische Kenntnisse">Technical Matrix</div>
     </div>
 
     <div class="skills-matrix-grid">
@@ -137,7 +142,6 @@
             <span class="skill-group-icon">💻</span>
             <span class="skill-group-title" data-en="Programming Languages" data-de="Programmiersprachen">Programming Languages</span>
           </div>
-          <button type="button" class="card-lang-badge" data-target-lang="de" title="Click to view entire section in German">🇩🇪 DE</button>
         </div>
         <div class="skill-sub-item">
           <span class="skill-sub-label" data-en="Systems & OOP" data-de="Systemnah & OOP">Systems & OOP</span>
@@ -190,7 +194,6 @@
             <span class="skill-group-icon">🛠️</span>
             <span class="skill-group-title" data-en="Software & DevOps Tools" data-de="Software- & Entwicklungstools">Software & DevOps Tools</span>
           </div>
-          <button type="button" class="card-lang-badge" data-target-lang="de" title="Click to view entire section in German">🇩🇪 DE</button>
         </div>
         <div class="skill-sub-item">
           <span class="skill-sub-label" data-en="Version Control" data-de="Versionsverwaltung">Version Control</span>
@@ -246,7 +249,6 @@
             <span class="skill-group-icon">🤖</span>
             <span class="skill-group-title" data-en="Robotics Frameworks" data-de="Robotik-Frameworks">Robotics Frameworks</span>
           </div>
-          <button type="button" class="card-lang-badge" data-target-lang="de" title="Click to view entire section in German">🇩🇪 DE</button>
         </div>
         <div class="skill-sub-item">
           <span class="skill-sub-label" data-en="Robotics Middleware" data-de="Robotik-Middleware">Robotics Middleware</span>
@@ -280,7 +282,6 @@
             <span class="skill-group-icon">📐</span>
             <span class="skill-group-title" data-en="CAD & Mechanical Design" data-de="CAD-Tools & Konstruktion">CAD & Mechanical Design</span>
           </div>
-          <button type="button" class="card-lang-badge" data-target-lang="de" title="Click to view entire section in German">🇩🇪 DE</button>
         </div>
         <div class="skill-sub-item">
           <span class="skill-sub-label" data-en="3D CAD" data-de="3D-CAD">3D CAD</span>
@@ -313,7 +314,6 @@
             <span class="skill-group-icon">🧠</span>
             <span class="skill-group-title" data-en="AI Frameworks & Libraries" data-de="KI-Frameworks & Bibliotheken">AI Frameworks & Libraries</span>
           </div>
-          <button type="button" class="card-lang-badge" data-target-lang="de" title="Click to view entire section in German">🇩🇪 DE</button>
         </div>
         <div class="skill-sub-item">
           <span class="skill-sub-label" data-en="Deep Learning & ML" data-de="Deep Learning & ML">Deep Learning & ML</span>
@@ -359,7 +359,6 @@
             <span class="skill-group-icon">📡</span>
             <span class="skill-group-title" data-en="Sensors & Signal Processing" data-de="Sensorik & Signalverarbeitung">Sensors & Signal Processing</span>
           </div>
-          <button type="button" class="card-lang-badge" data-target-lang="de" title="Click to view entire section in German">🇩🇪 DE</button>
         </div>
         <div class="skill-sub-item">
           <span class="skill-sub-label" data-en="Optical Systems" data-de="Optische Systeme">Optical Systems</span>
@@ -402,7 +401,6 @@
             <span class="skill-group-icon">⚙️</span>
             <span class="skill-group-title" data-en="Systems Engineering & Modeling" data-de="Systems Engineering & Modellierung">Systems Engineering & Modeling</span>
           </div>
-          <button type="button" class="card-lang-badge" data-target-lang="de" title="Click to view entire section in German">🇩🇪 DE</button>
         </div>
         <div class="skill-sub-item">
           <span class="skill-sub-label" data-en="Requirements Analysis" data-de="Anforderungsanalyse">Requirements Analysis</span>
@@ -441,7 +439,6 @@
             <span class="skill-group-icon">🔌</span>
             <span class="skill-group-title" data-en="Hardware & Interface Integration" data-de="Hardware & Schnittstellenintegration">Hardware & Interface Integration</span>
           </div>
-          <button type="button" class="card-lang-badge" data-target-lang="de" title="Click to view entire section in German">🇩🇪 DE</button>
         </div>
         <div class="skill-sub-item">
           <span class="skill-sub-label" data-en="Hardware Development" data-de="Hardware-Entwicklung">Hardware Development</span>
@@ -483,7 +480,6 @@
             <span class="skill-group-icon">🛡️</span>
             <span class="skill-group-title" data-en="IT Infrastructure & Security" data-de="IT-Infrastruktur & Security">IT Infrastructure & Security</span>
           </div>
-          <button type="button" class="card-lang-badge" data-target-lang="de" title="Click to view entire section in German">🇩🇪 DE</button>
         </div>
         <div class="skill-sub-item">
           <span class="skill-sub-label" data-en="Operating Systems" data-de="Betriebssysteme">Operating Systems</span>
@@ -528,7 +524,6 @@
             <span class="skill-group-icon">🔬</span>
             <span class="skill-group-title" data-en="Commissioning & Lab Practice" data-de="Inbetriebnahme & Laborpraxis">Commissioning & Lab Practice</span>
           </div>
-          <button type="button" class="card-lang-badge" data-target-lang="de" title="Click to view entire section in German">🇩🇪 DE</button>
         </div>
         <div class="skill-sub-item">
           <span class="skill-sub-label" data-en="System Bring-Up" data-de="System-Bring-up">System Bring-Up</span>
@@ -565,7 +560,6 @@
             <span class="skill-group-icon">🦾</span>
             <span class="skill-group-title" data-en="Industrial Robot Platforms" data-de="Industrieroboter-Plattformen">Industrial Robot Platforms</span>
           </div>
-          <button type="button" class="card-lang-badge" data-target-lang="de" title="Click to view entire section in German">🇩🇪 DE</button>
         </div>
         <div class="skill-sub-item">
           <span class="skill-sub-label" data-en="7-Axis Manipulator" data-de="7-Achs-Manipulator">7-Axis Manipulator</span>
@@ -594,7 +588,6 @@
             <span class="skill-group-icon">💡</span>
             <span class="skill-group-title" data-en="Soft Skills & Work Ethic" data-de="Soft Skills & Arbeitsweise">Soft Skills & Work Ethic</span>
           </div>
-          <button type="button" class="card-lang-badge" data-target-lang="de" title="Click to view entire section in German">🇩🇪 DE</button>
         </div>
         <div class="skill-sub-item">
           <span class="skill-sub-label" data-en="Work Approach" data-de="Arbeitsweise">Work Approach</span>
@@ -625,7 +618,6 @@
             <span class="skill-group-icon">🌍</span>
             <span class="skill-group-title" data-en="Languages & Standards" data-de="Sprachen & Standards">Languages & Standards</span>
           </div>
-          <button type="button" class="card-lang-badge" data-target-lang="de" title="Click to view entire section in German">🇩🇪 DE</button>
         </div>
         <div class="skill-sub-item">
           <span class="skill-sub-label" data-en="Spoken Languages" data-de="Sprachen">Spoken Languages</span>
@@ -657,8 +649,9 @@
     <div class="projects-grid">
       <div class="project-card reveal">
         <div class="project-icon">🤖</div>
-        <h3>RL-Based Robotic Push Control</h3>
-        <p>Master's thesis: PPO-trained Franka Panda agent that pushes objects along straight, Bézier, and S-curve
+        <h3 data-en="RL-Based Robotic Push Control" data-de="RL-basierte Roboter-Schubregelung">RL-Based Robotic Push Control</h3>
+        <p data-en="Master's thesis: PPO-trained Franka Panda agent that pushes objects along straight, Bézier, and S-curve trajectories in MuJoCo. Custom reward shaping with progress tracking, proximity gating, and orientation alignment."
+           data-de="Masterarbeit: Mit PPO trainierter Franka Panda Roboter, der Objekte entlang gerader, Bézier- und S-Kurven-Trajektorien in MuJoCo führt. Reward-Shaping mit Fortschrittstracking, Abstands-Gating und Orientierungsausrichtung.">Master's thesis: PPO-trained Franka Panda agent that pushes objects along straight, Bézier, and S-curve
           trajectories in MuJoCo. Custom reward shaping with progress tracking, proximity gating, and orientation
           alignment.</p>
         <div class="project-tags">
@@ -668,8 +661,9 @@
 
       <div class="project-card reveal">
         <div class="project-icon">📡</div>
-        <h3>NFC Thermocouple Sensor PCB</h3>
-        <p>Designed a battery-free NFC sensor board in KiCad for temperature data transmission at FRM II. Uses TI
+        <h3 data-en="NFC Thermocouple Sensor PCB" data-de="Batterielose NFC-Thermoelement-Sensorplatine">NFC Thermocouple Sensor PCB</h3>
+        <p data-en="Designed a battery-free NFC sensor board in KiCad for temperature data transmission at FRM II. Uses TI RF430FRL152H with OPA333 op-amp and NFC energy harvesting — no external power needed."
+           data-de="Entwicklung einer batterielosen NFC-Sensorplatine in KiCad zur Temperaturmessung am FRM II. Basiert auf TI RF430FRL152H, OPA333 Operationsverstärker und NFC Energy Harvesting ohne externe Stromversorgung.">Designed a battery-free NFC sensor board in KiCad for temperature data transmission at FRM II. Uses TI
           RF430FRL152H with OPA333 op-amp and NFC energy harvesting — no external power needed.</p>
         <div class="project-tags">
           <span>KiCad</span><span>NFC</span><span>Embedded</span><span>Analog</span>
@@ -678,8 +672,9 @@
 
       <div class="project-card reveal">
         <div class="project-icon">🦾</div>
-        <h3>Wire Loop Navigation — KUKA LBR iiwa</h3>
-        <p>Reactive force-feedback control for navigating a wire loop game with a 7-DOF KUKA arm. Explored geometric
+        <h3 data-en="Wire Loop Navigation — KUKA LBR iiwa" data-de="Drahtschlingen-Navigation — KUKA LBR iiwa">Wire Loop Navigation — KUKA LBR iiwa</h3>
+        <p data-en="Reactive force-feedback control for navigating a wire loop game with a 7-DOF KUKA arm. Explored geometric constraints of step-size vs. arc-length on sharp curves."
+           data-de="Reaktive Kraftrückkopplungsregelung zur Navigation eines Heißer-Draht-Spiels mit einem 7-DOF KUKA Roboterarm unter Berücksichtigung geometrischer Krümmungsbeschränkungen.">Reactive force-feedback control for navigating a wire loop game with a 7-DOF KUKA arm. Explored geometric
           constraints of step-size vs. arc-length on sharp curves.</p>
         <div class="project-tags">
           <span>ROS</span><span>C++</span><span>Force Control</span><span>KUKA</span>
@@ -688,8 +683,9 @@
 
       <div class="project-card reveal">
         <div class="project-icon">🚗</div>
-        <h3>TAS-Car Autonomous Vehicle</h3>
-        <p>Contributed to an autonomous driving platform integrating SLAM, perception, and path planning in a real-world
+        <h3 data-en="TAS-Car Autonomous Vehicle" data-de="TAS-Car Autonomes Forschungsfahrzeug">TAS-Car Autonomous Vehicle</h3>
+        <p data-en="Contributed to an autonomous driving platform integrating SLAM, perception, and path planning in a real-world research vehicle at TUM."
+           data-de="Mitarbeit an einer autonomen Fahrplattform mit Integration von SLAM, visueller Perzeption und Pfadplanung an einem TUM-Forschungsfahrzeug.">Contributed to an autonomous driving platform integrating SLAM, perception, and path planning in a real-world
           research vehicle at TUM.</p>
         <div class="project-tags">
           <span>ROS2</span><span>SLAM</span><span>C++</span><span>Perception</span>
@@ -700,16 +696,9 @@
 
   <!-- ── Experience ── -->
   <section id="experience" style="background: var(--bg-card);">
-    <div class="skills-header-row reveal">
-      <div>
-        <div class="section-label" data-en="// 04 — Experience" data-de="// 04 — Berufserfahrung">// 04 — Experience</div>
-        <div class="section-title" data-en="Where I've worked" data-de="Berufserfahrung">Where I've worked</div>
-      </div>
-      <div class="skills-lang-switch">
-        <span class="lang-switch-hint">🌐 View in:</span>
-        <button type="button" class="lang-switch-btn active" data-lang="en">English</button>
-        <button type="button" class="lang-switch-btn" data-lang="de">Deutsch</button>
-      </div>
+    <div class="reveal">
+      <div class="section-label" data-en="// 04 — Experience" data-de="// 04 — Berufserfahrung">// 04 — Experience</div>
+      <div class="section-title" data-en="Where I've worked" data-de="Berufserfahrung">Where I've worked</div>
     </div>
 
     <div class="timeline">
