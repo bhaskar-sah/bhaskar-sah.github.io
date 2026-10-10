@@ -662,52 +662,208 @@
   <!-- ── Projects ── -->
   <section id="projects">
     <div class="reveal">
-      <div class="section-label" data-en="// 03 — Projects" data-de="// 03 — Projekte">// 03 — Projects</div>
+      <div class="section-label" data-en="// 03 — Projects & Research" data-de="// 03 — Projekte & Arbeiten">// 03 — Projects & Research</div>
       <div class="section-title" data-en="Selected Work" data-de="Ausgewählte Projekte">Selected Work</div>
     </div>
+
+    <!-- ── Subheading 1: Wissenschaftliche Arbeiten ── -->
+    <div class="project-subsection-header reveal">
+      <h3 class="project-subsection-title" data-en="🔬 Scientific Theses & Research" data-de="🔬 Wissenschaftliche Arbeiten">🔬 Scientific Theses & Research</h3>
+      <p class="project-subsection-desc"
+         data-en="Master's thesis, research internship, and Bachelor's thesis from academic laboratories."
+         data-de="Masterarbeit, Forschungspraxis und Bachelorarbeit aus der universitären Spitzenforschung.">
+        Master's thesis, research internship, and Bachelor's thesis from academic laboratories.
+      </p>
+    </div>
+
     <div class="projects-grid">
+      <!-- Thesis 1: Master's Thesis TUM AIR -->
       <div class="project-card reveal">
-        <div class="project-icon">🤖</div>
-        <h3 data-en="RL-Based Robotic Push Control" data-de="RL-basierte Roboter-Schubregelung">RL-Based Robotic Push Control</h3>
-        <p data-en="Master's thesis: PPO-trained Franka Panda agent that pushes objects along straight, Bézier, and S-curve trajectories in MuJoCo. Custom reward shaping with progress tracking, proximity gating, and orientation alignment."
-           data-de="Masterarbeit: Mit PPO trainierter Franka Panda Roboter, der Objekte entlang gerader, Bézier- und S-Kurven-Trajektorien in MuJoCo führt. Reward-Shaping mit Fortschrittstracking, Abstands-Gating und Orientierungsausrichtung.">Master's thesis: PPO-trained Franka Panda agent that pushes objects along straight, Bézier, and S-curve
-          trajectories in MuJoCo. Custom reward shaping with progress tracking, proximity gating, and orientation
-          alignment.</p>
+        <div class="project-card-header">
+          <div class="project-icon">🤖</div>
+          <span class="project-meta-badge" data-en="M.Sc. Thesis · Grade 1.3" data-de="Masterarbeit · Note 1,3">M.Sc. Thesis · Grade 1.3</span>
+        </div>
+        <h3 data-en="Augmenting Pose Trajectories with Learned Force Profiles"
+            data-de="Augmenting Pose Trajectories with Learned Force Profiles">Augmenting Pose Trajectories with Learned Force Profiles</h3>
+        <div class="project-inst" data-en="Chair of Robotics, AI and Real-time Systems (AIR), TUM" data-de="Lehrstuhl für Robotik, KI und Echtzeitsysteme (AIR), TUM">Chair of Robotics, AI and Real-time Systems (AIR), TUM</div>
+        <p data-en="Development and OOP implementation of a Reinforcement Learning policy to learn dynamic force profiles for robotic manipulators (Franka Emika Panda) under variable environmental conditions. Physics-based simulation in MuJoCo, ONNX model optimization, and successful Sim2Real transfer."
+           data-de="Entwicklung und objektorientierte Implementierung (OOP) einer RL-Policy zum Erlernen dynamischer Kraftprofile für robotische Manipulatoren unter variablen Umgebungsbedingungen und variierendem Kraft-Feedback. Simulation in MuJoCo, ONNX-Optimierung und erfolgreicher Sim2Real-Transfer.">
+          Development and OOP implementation of a Reinforcement Learning policy to learn dynamic force profiles for robotic manipulators (Franka Emika Panda) under variable environmental conditions. Physics-based simulation in MuJoCo, ONNX model optimization, and successful Sim2Real transfer.
+        </p>
         <div class="project-tags">
-          <span>Python</span><span>MuJoCo</span><span>PPO</span><span>Gymnasium</span>
+          <span>Reinforcement Learning</span><span>PPO</span><span>MuJoCo</span><span>ONNX</span><span>Franka Panda</span><span>Sim2Real</span>
         </div>
       </div>
 
+      <!-- Thesis 2: Forschungspraxis TUM LSR -->
       <div class="project-card reveal">
-        <div class="project-icon">📡</div>
-        <h3 data-en="NFC Thermocouple Sensor PCB" data-de="Batterielose NFC-Thermoelement-Sensorplatine">NFC Thermocouple Sensor PCB</h3>
-        <p data-en="Designed a battery-free NFC sensor board in KiCad for temperature data transmission at FRM II. Uses TI RF430FRL152H with OPA333 op-amp and NFC energy harvesting — no external power needed."
-           data-de="Entwicklung einer batterielosen NFC-Sensorplatine in KiCad zur Temperaturmessung am FRM II. Basiert auf TI RF430FRL152H, OPA333 Operationsverstärker und NFC Energy Harvesting ohne externe Stromversorgung.">Designed a battery-free NFC sensor board in KiCad for temperature data transmission at FRM II. Uses TI
-          RF430FRL152H with OPA333 op-amp and NFC energy harvesting — no external power needed.</p>
+        <div class="project-card-header">
+          <div class="project-icon">🚗</div>
+          <span class="project-meta-badge" data-en="Research Practice · Grade 1.3" data-de="Forschungspraxis · Note 1,3">Research Practice · Grade 1.3</span>
+        </div>
+        <h3 data-en="Implementation of SLAM Algorithm for the TAS Car based on Road Markings"
+            data-de="Implementation of SLAM Algorithm for the TAS Car based on Road Markings">Implementation of SLAM Algorithm for the TAS Car based on Road Markings</h3>
+        <div class="project-inst" data-en="Chair of Control Engineering (LSR), TUM" data-de="Lehrstuhl für Steuerungs- und Regelungstechnik (LSR), TUM">Chair of Control Engineering (LSR), TUM</div>
+        <p data-en="Engineered a multi-sensor data fusion pipeline (RGB-D camera, LiDAR, IMU) using classical computer vision algorithms to generate dynamic SLAM feature maps including road markings. Simulation in Gazebo and real-world validation on the TAS Car research platform."
+           data-de="Entwicklung und Implementierung einer multisensorischen Datenfusionspipeline (RGB-D-Kamera, LiDAR, IMU) mittels klassischer Computer-Vision-Algorithmen zur Generierung dynamischer SLAM-Karten für das TAS Car. Simulation in Gazebo sowie finale Validierung direkt am realen TAS Car.">
+          Engineered a multi-sensor data fusion pipeline (RGB-D camera, LiDAR, IMU) using classical computer vision algorithms to generate dynamic SLAM feature maps including road markings. Simulation in Gazebo and real-world validation on the TAS Car research platform.
+        </p>
         <div class="project-tags">
-          <span>KiCad</span><span>NFC</span><span>Embedded</span><span>Analog</span>
+          <span>ROS2</span><span>LiDAR SLAM</span><span>RGB-D Fusion</span><span>Computer Vision</span><span>Gazebo</span><span>TAS Car</span>
         </div>
       </div>
 
+      <!-- Thesis 3: Bachelor's Thesis PTB Braunschweig -->
       <div class="project-card reveal">
-        <div class="project-icon">🦾</div>
-        <h3 data-en="Wire Loop Navigation — KUKA LBR iiwa" data-de="Drahtschlingen-Navigation — KUKA LBR iiwa">Wire Loop Navigation — KUKA LBR iiwa</h3>
-        <p data-en="Reactive force-feedback control for navigating a wire loop game with a 7-DOF KUKA arm. Explored geometric constraints of step-size vs. arc-length on sharp curves."
-           data-de="Reaktive Kraftrückkopplungsregelung zur Navigation eines Heißer-Draht-Spiels mit einem 7-DOF KUKA Roboterarm unter Berücksichtigung geometrischer Krümmungsbeschränkungen.">Reactive force-feedback control for navigating a wire loop game with a 7-DOF KUKA arm. Explored geometric
-          constraints of step-size vs. arc-length on sharp curves.</p>
+        <div class="project-card-header">
+          <div class="project-icon">📡</div>
+          <span class="project-meta-badge" data-en="B.Sc. Thesis · Grade 1.6" data-de="Bachelorarbeit · Note 1,6">B.Sc. Thesis · Grade 1.6</span>
+        </div>
+        <h3 data-en="Matrix Sensor Data Acquisition for Closed Magnetic Circuit Parameter Determination"
+            data-de="Datenerfassung einer Matrix-Sensorik zur Bestimmung magnetischer Parameter">Matrix Sensor Data Acquisition for Closed Magnetic Circuit Parameter Determination</h3>
+        <div class="project-inst" data-en="Physikalisch-Technische Bundesanstalt (PTB), Braunschweig" data-de="Physikalisch-Technische Bundesanstalt (PTB), Braunschweig">Physikalisch-Technische Bundesanstalt (PTB), Braunschweig</div>
+        <p data-en="Conceptualized and developed an automated measurement pipeline for precise matrix sensor signal acquisition (field strength, magnetic flux density) using Arduino, FPGA, and NI DAQ with LabVIEW visualization. Automated data analysis in Python and GUM uncertainty evaluation."
+           data-de="Konzeption und Entwicklung einer automatisierten Mess- und Datenerfassungspipeline zur präzisen Signalerfassung einer Matrix-Sensorik zur Bestimmung magnetischer Parameter (Feldstärke, Flussdichte) mittels Arduino, FPGA und NI DAQ sowie Visualisierung in LabVIEW und Python-Analyse nach GUM.">
+          Conceptualized and developed an automated measurement pipeline for precise matrix sensor signal acquisition (field strength, magnetic flux density) using Arduino, FPGA, and NI DAQ with LabVIEW visualization. Automated data analysis in Python and GUM uncertainty evaluation.
+        </p>
         <div class="project-tags">
-          <span>ROS</span><span>C++</span><span>Force Control</span><span>KUKA</span>
+          <span>Arduino</span><span>DE0-Nano FPGA</span><span>LabVIEW</span><span>NI DAQ</span><span>Python (NumPy, SciPy)</span><span>GUM Guidelines</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Subheading 2: Hochschulprojekte ── -->
+    <div class="project-subsection-header reveal" style="margin-top: 4.5rem;">
+      <h3 class="project-subsection-title" data-en="🎓 University Engineering Projects" data-de="🎓 Hochschulprojekte">🎓 University Engineering Projects</h3>
+      <p class="project-subsection-desc"
+         data-en="Practical engineering laboratories, autonomous vehicle software, deep learning, and embedded control systems at TUM and TU Braunschweig."
+         data-de="Ingenieurpraktika, autonome Fahrzeugsoftware, Deep Learning und praktische Regelungstechnik an der TUM und TU Braunschweig.">
+        Practical engineering laboratories, autonomous vehicle software, deep learning, and embedded control systems at TUM and TU Braunschweig.
+      </p>
+    </div>
+
+    <!-- Group TUM -->
+    <div class="project-institution-divider reveal">
+      <span data-en="Technische Universität München (TUM)" data-de="Technische Universität München (TUM)">Technische Universität München (TUM)</span>
+    </div>
+
+    <div class="projects-grid">
+      <!-- TUM 1 -->
+      <div class="project-card reveal">
+        <div class="project-icon">⚡</div>
+        <h3 data-en="Concepts & Software Design for Cyber-Physical Systems"
+            data-de="Konzepte und Software-Design für cyber-physische Systeme">Concepts & Software Design for Cyber-Physical Systems</h3>
+        <p data-en="Development of a ball-balancing mechatronic system with dsPIC33 microcontroller and Raspberry Pi 3, including real-time PID control implemented in C."
+           data-de="Entwicklung eines Ball-Balanciersystems mit dsPIC33-Mikrocontroller und Raspberry Pi 3 inkl. PID-Regler zur Echtzeitsteuerung in C.">
+          Development of a ball-balancing mechatronic system with dsPIC33 microcontroller and Raspberry Pi 3, including real-time PID control implemented in C.
+        </p>
+        <div class="project-tags">
+          <span>dsPIC33</span><span>Raspberry Pi 3</span><span>Real-Time C</span><span>PID Control</span><span>Embedded</span>
         </div>
       </div>
 
+      <!-- TUM 2 -->
       <div class="project-card reveal">
-        <div class="project-icon">🚗</div>
-        <h3 data-en="TAS-Car Autonomous Vehicle" data-de="TAS-Car Autonomes Forschungsfahrzeug">TAS-Car Autonomous Vehicle</h3>
-        <p data-en="Contributed to an autonomous driving platform integrating SLAM, perception, and path planning in a real-world research vehicle at TUM."
-           data-de="Mitarbeit an einer autonomen Fahrplattform mit Integration von SLAM, visueller Perzeption und Pfadplanung an einem TUM-Forschungsfahrzeug.">Contributed to an autonomous driving platform integrating SLAM, perception, and path planning in a real-world
-          research vehicle at TUM.</p>
+        <div class="project-icon">🎛️</div>
+        <h3 data-en="Controller Implementation on Microcontrollers"
+            data-de="Reglerimplementierung auf Mikrocontroller">Controller Implementation on Microcontrollers</h3>
+        <p data-en="Implementation of PID controllers, differential flatness-based control methods, and state observer design for balancing an inverted-pendulum mini robot in C."
+           data-de="Implementierung von PID-Reglern, flachheitsbasierten Regelungsmethoden und Beobachterentwurf zum Balancieren eines Mini-Roboters in C.">
+          Implementation of PID controllers, differential flatness-based control methods, and state observer design for balancing an inverted-pendulum mini robot in C.
+        </p>
         <div class="project-tags">
-          <span>ROS2</span><span>SLAM</span><span>C++</span><span>Perception</span>
+          <span>C</span><span>Microcontroller</span><span>Flatness-Based Control</span><span>State Observer</span><span>Balancing Robot</span>
+        </div>
+      </div>
+
+      <!-- TUM 3 -->
+      <div class="project-card reveal">
+        <div class="project-icon">🧠</div>
+        <h3 data-en="Practical Deep Learning"
+            data-de="Praktisches Deep-Learning">Practical Deep Learning</h3>
+        <p data-en="Training deep Convolutional Neural Network architectures (LeNet, ResNet-16) with PyTorch for image classification benchmarks and implementing adversarial attack methods."
+           data-de="Training von CNN-Architekturen (LeNet, ResNet-16) mit PyTorch für Bildklassifikation und Implementierung von Adversarial-Attack-Methoden.">
+          Training deep Convolutional Neural Network architectures (LeNet, ResNet-16) with PyTorch for image classification benchmarks and implementing adversarial attack methods.
+        </p>
+        <div class="project-tags">
+          <span>PyTorch</span><span>CNN (ResNet, LeNet)</span><span>Computer Vision</span><span>Adversarial Attacks</span><span>Python</span>
+        </div>
+      </div>
+
+      <!-- TUM 4 -->
+      <div class="project-card reveal">
+        <div class="project-icon">🏭</div>
+        <h3 data-en="Mobile Robotics in Intralogistics"
+            data-de="Mobile Robotik in der Intralogistik">Mobile Robotics in Intralogistics</h3>
+        <p data-en="Development of SLAM, computer vision pipelines, path planning, and autonomous navigation with multi-sensor integration of LiDAR, camera, ultrasonic sensors, and GPS."
+           data-de="Entwicklung von SLAM, Computer Vision, Pfadplanung und Navigation mit Integration von LiDAR, Kamera, Ultraschall und GPS.">
+          Development of SLAM, computer vision pipelines, path planning, and autonomous navigation with multi-sensor integration of LiDAR, camera, ultrasonic sensors, and GPS.
+        </p>
+        <div class="project-tags">
+          <span>Mobile Robotics</span><span>SLAM</span><span>LiDAR & Camera</span><span>Path Planning</span><span>Sensor Fusion</span>
+        </div>
+      </div>
+
+      <!-- TUM 5 -->
+      <div class="project-card reveal">
+        <div class="project-icon">🚘</div>
+        <h3 data-en="Autonomous Systems Engineering"
+            data-de="Technik Autonomer Systeme">Autonomous Systems Engineering</h3>
+        <p data-en="Advancing autonomous driving capabilities through SLAM-GMAPPING and particle-filter-based localization algorithms implemented in ROS2 and Gazebo simulation environments."
+           data-de="Weiterentwicklung autonomer Fahrzeugfähigkeiten mittels SLAM-GMAPPING und partikelfilterbasierter Lokalisierung in ROS2 und Gazebo.">
+          Advancing autonomous driving capabilities through SLAM-GMAPPING and particle-filter-based localization algorithms implemented in ROS2 and Gazebo simulation environments.
+        </p>
+        <div class="project-tags">
+          <span>ROS2</span><span>SLAM-GMAPPING</span><span>Particle Filter</span><span>Gazebo</span><span>Localization</span>
+        </div>
+      </div>
+
+      <!-- TUM 6 -->
+      <div class="project-card reveal">
+        <div class="project-icon">🕹️</div>
+        <h3 data-en="Introduction to ROS – Autonomous Vehicle Control"
+            data-de="Einführung in ROS – Autonome Fahrzeugsteuerung">Introduction to ROS – Autonomous Vehicle Control</h3>
+        <p data-en="Development of an end-to-end autonomous vehicle control pipeline featuring closed-loop steering and velocity control algorithms in ROS1, C++, and Unity simulation."
+           data-de="Entwicklung eines vollständigen autonomen Fahrzeugsystems mit Regelungsalgorithmen für Lenkung und Geschwindigkeit in ROS1, C++ und Unity.">
+          Development of an end-to-end autonomous vehicle control pipeline featuring closed-loop steering and velocity control algorithms in ROS1, C++, and Unity simulation.
+        </p>
+        <div class="project-tags">
+          <span>ROS1</span><span>C++</span><span>Unity</span><span>Vehicle Control</span><span>Steering & Speed</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Group TUBS -->
+    <div class="project-institution-divider reveal">
+      <span data-en="Technische Universität Braunschweig (TUBS)" data-de="Technische Universität Braunschweig (TUBS)">Technische Universität Braunschweig (TUBS)</span>
+    </div>
+
+    <div class="projects-grid">
+      <!-- TUBS 1 -->
+      <div class="project-card reveal">
+        <div class="project-icon">🚲</div>
+        <h3 data-en="Project Work: Bicycle Dynamics Modeling"
+            data-de="Projektarbeit: Modellierung Fahrrad">Project Work: Bicycle Dynamics Modeling</h3>
+        <p data-en="Comprehensive multibody system simulation in MATLAB and Simulink, mathematical derivation of equations of motion based on Lagrange equations of the 1st and 2nd kind, and stability analysis."
+           data-de="Simulation in MATLAB und Simulink, Erstellung mathematischer Gleichungen basierend auf den Lagrange-Gleichungen 1. und 2. Art sowie Stabilitäts- und Dynamikanalyse des nichtlinearen Fahrradmodells.">
+          Comprehensive multibody system simulation in MATLAB and Simulink, mathematical derivation of equations of motion based on Lagrange equations of the 1st and 2nd kind, and stability analysis.
+        </p>
+        <div class="project-tags">
+          <span>MATLAB</span><span>Simulink</span><span>Lagrange Equations</span><span>Multibody Dynamics</span><span>Nonlinear Modeling</span>
+        </div>
+      </div>
+
+      <!-- TUBS 2 -->
+      <div class="project-card reveal">
+        <div class="project-icon">🔌</div>
+        <h3 data-en="Applied Electronics & Circuit Engineering"
+            data-de="Angewandte Elektronik">Applied Electronics & Circuit Engineering</h3>
+        <p data-en="Circuit design and dimensioning of analog and digital stages, active operational amplifier filter design, simulation in LTspice, breadboard/PCB assembly, and experimental lab verification."
+           data-de="Entwurf und Dimensionierung analoger sowie digitaler Schaltungen, aktive Filter und Operationsverstärkerstufen, Simulation in LTspice, Schaltungsaufbau und messtechnische Inbetriebnahme im Labor.">
+          Circuit design and dimensioning of analog and digital stages, active operational amplifier filter design, simulation in LTspice, breadboard/PCB assembly, and experimental lab verification.
+        </p>
+        <div class="project-tags">
+          <span>LTspice</span><span>Analog Circuits</span><span>Op-Amps & Filters</span><span>PCB & Breadboard</span><span>Lab Verification</span>
         </div>
       </div>
     </div>
